@@ -7,23 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		045AC7D22BE8708B0089E49A /* CornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AC7D12BE8708B0089E49A /* CornerView.swift */; };
 		04DF28D72BE49C1C008247B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF28D62BE49C1C008247B1 /* AppDelegate.swift */; };
 		04DF28D92BE49C1C008247B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF28D82BE49C1C008247B1 /* SceneDelegate.swift */; };
-		04DF28DB2BE49C1C008247B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF28DA2BE49C1C008247B1 /* ViewController.swift */; };
+		04DF28DB2BE49C1C008247B1 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF28DA2BE49C1C008247B1 /* MainScreenViewController.swift */; };
 		04DF28DE2BE49C1C008247B1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 04DF28DD2BE49C1C008247B1 /* Base */; };
 		04DF28E02BE49C1E008247B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04DF28DF2BE49C1E008247B1 /* Assets.xcassets */; };
 		04DF28E32BE49C1E008247B1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 04DF28E22BE49C1E008247B1 /* Base */; };
+		04DF28F22BE4A05D008247B1 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF28F12BE4A05D008247B1 /* R.generated.swift */; };
+		3FA30B438E57039140F5BD00 /* Pods_DialogDroid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 902B7B0F26F225B99FDA2B90 /* Pods_DialogDroid.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		045AC7D12BE8708B0089E49A /* CornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerView.swift; sourceTree = "<group>"; };
 		04DF28D32BE49C1C008247B1 /* DialogDroid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DialogDroid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04DF28D62BE49C1C008247B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04DF28D82BE49C1C008247B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		04DF28DA2BE49C1C008247B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		04DF28DA2BE49C1C008247B1 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		04DF28DD2BE49C1C008247B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04DF28DF2BE49C1E008247B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04DF28E22BE49C1E008247B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04DF28E42BE49C1E008247B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04DF28F12BE4A05D008247B1 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		571C1B55AEB516085AFAB066 /* Pods-DialogDroid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DialogDroid.debug.xcconfig"; path = "Target Support Files/Pods-DialogDroid/Pods-DialogDroid.debug.xcconfig"; sourceTree = "<group>"; };
+		902B7B0F26F225B99FDA2B90 /* Pods_DialogDroid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DialogDroid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6F826579998BC2C2BA5C8FC /* Pods-DialogDroid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DialogDroid.release.xcconfig"; path = "Target Support Files/Pods-DialogDroid/Pods-DialogDroid.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FA30B438E57039140F5BD00 /* Pods_DialogDroid.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		045AC7CF2BE870600089E49A /* CustomElements */ = {
+			isa = PBXGroup;
+			children = (
+				045AC7D02BE870740089E49A /* Views */,
+			);
+			path = CustomElements;
+			sourceTree = "<group>";
+		};
+		045AC7D02BE870740089E49A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				045AC7D12BE8708B0089E49A /* CornerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		04DF28CA2BE49C1C008247B1 = {
 			isa = PBXGroup;
 			children = (
 				04DF28D52BE49C1C008247B1 /* DialogDroid */,
 				04DF28D42BE49C1C008247B1 /* Products */,
+				6ACABA769FDE79FD14CF6084 /* Pods */,
+				CE6C525350A3012FF3CB0C6C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +83,106 @@
 		04DF28D52BE49C1C008247B1 /* DialogDroid */ = {
 			isa = PBXGroup;
 			children = (
-				04DF28D62BE49C1C008247B1 /* AppDelegate.swift */,
-				04DF28D82BE49C1C008247B1 /* SceneDelegate.swift */,
-				04DF28DA2BE49C1C008247B1 /* ViewController.swift */,
-				04DF28DC2BE49C1C008247B1 /* Main.storyboard */,
-				04DF28DF2BE49C1E008247B1 /* Assets.xcassets */,
-				04DF28E12BE49C1E008247B1 /* LaunchScreen.storyboard */,
-				04DF28E42BE49C1E008247B1 /* Info.plist */,
+				04DF28F32BE4A074008247B1 /* Presentation */,
+				04DF28EF2BE4A004008247B1 /* Application */,
+				04DF28EA2BE49D23008247B1 /* Sources */,
 			);
 			path = DialogDroid;
+			sourceTree = "<group>";
+		};
+		04DF28EA2BE49D23008247B1 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				04DF28F02BE4A01C008247B1 /* SupportingFiles */,
+				04DF28EC2BE49D41008247B1 /* Resources */,
+				04DF28EB2BE49D2D008247B1 /* Generated */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		04DF28EB2BE49D2D008247B1 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				04DF28F12BE4A05D008247B1 /* R.generated.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		04DF28EC2BE49D41008247B1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				04DF28DF2BE49C1E008247B1 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		04DF28EF2BE4A004008247B1 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				04DF28D62BE49C1C008247B1 /* AppDelegate.swift */,
+				04DF28D82BE49C1C008247B1 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		04DF28F02BE4A01C008247B1 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				04DF28E42BE49C1E008247B1 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		04DF28F32BE4A074008247B1 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				045AC7CF2BE870600089E49A /* CustomElements */,
+				04DF28F62BE4A0A0008247B1 /* MainScreen */,
+				04DF28F52BE4A08A008247B1 /* Storyboard */,
+				04DF28F42BE4A07B008247B1 /* LaunchScreen */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		04DF28F42BE4A07B008247B1 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				04DF28E12BE49C1E008247B1 /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		04DF28F52BE4A08A008247B1 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				04DF28DC2BE49C1C008247B1 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		04DF28F62BE4A0A0008247B1 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				04DF28DA2BE49C1C008247B1 /* MainScreenViewController.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		6ACABA769FDE79FD14CF6084 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				571C1B55AEB516085AFAB066 /* Pods-DialogDroid.debug.xcconfig */,
+				C6F826579998BC2C2BA5C8FC /* Pods-DialogDroid.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CE6C525350A3012FF3CB0C6C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				902B7B0F26F225B99FDA2B90 /* Pods_DialogDroid.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +192,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04DF28E72BE49C1E008247B1 /* Build configuration list for PBXNativeTarget "DialogDroid" */;
 			buildPhases = (
+				409D80CA9DC7584604A18F4F /* [CP] Check Pods Manifest.lock */,
+				04DF28ED2BE49D83008247B1 /* R.swift */,
 				04DF28CF2BE49C1C008247B1 /* Sources */,
 				04DF28D02BE49C1C008247B1 /* Frameworks */,
 				04DF28D12BE49C1C008247B1 /* Resources */,
+				A2D6B7B8B2F288A0402947DF /* [CP] Embed Pods Frameworks */,
+				04DF28EE2BE49DCC008247B1 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -133,14 +255,98 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		04DF28ED2BE49D83008247B1 /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = R.swift;
+			outputFileListPaths = (
+				"",
+			);
+			outputPaths = (
+				"$(SRCROOT)/DialogDroid/Sources/Generated/R.generated.swift ",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/DialogDroid/Sources/Generated/R.generated.swift\"\n\n";
+		};
+		04DF28EE2BE49DCC008247B1 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		409D80CA9DC7584604A18F4F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DialogDroid-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2D6B7B8B2F288A0402947DF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DialogDroid/Pods-DialogDroid-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DialogDroid/Pods-DialogDroid-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DialogDroid/Pods-DialogDroid-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		04DF28CF2BE49C1C008247B1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04DF28DB2BE49C1C008247B1 /* ViewController.swift in Sources */,
+				045AC7D22BE8708B0089E49A /* CornerView.swift in Sources */,
+				04DF28DB2BE49C1C008247B1 /* MainScreenViewController.swift in Sources */,
 				04DF28D72BE49C1C008247B1 /* AppDelegate.swift in Sources */,
 				04DF28D92BE49C1C008247B1 /* SceneDelegate.swift in Sources */,
+				04DF28F22BE4A05D008247B1 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,19 +493,23 @@
 		};
 		04DF28E82BE49C1E008247B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 571C1B55AEB516085AFAB066 /* Pods-DialogDroid.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PMQYZYH462;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DialogDroid/Info.plist;
+				INFOPLIST_FILE = DialogDroid/Sources/SupportingFiles/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,27 +517,35 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = urban.DialogDroid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		04DF28E92BE49C1E008247B1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6F826579998BC2C2BA5C8FC /* Pods-DialogDroid.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PMQYZYH462;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DialogDroid/Info.plist;
+				INFOPLIST_FILE = DialogDroid/Sources/SupportingFiles/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,9 +553,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = urban.DialogDroid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

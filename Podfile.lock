@@ -1,0 +1,28 @@
+PODS:
+  - Alamofire (5.9.1)
+  - lottie-ios (4.4.3)
+  - R.swift (7.3.2)
+  - SwiftLint (0.54.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.6)
+  - lottie-ios
+  - R.swift (~> 7.3)
+  - SwiftLint (~> 0.50)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - lottie-ios
+    - R.swift
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  Alamofire: f36a35757af4587d8e4f4bfa223ad10be2422b8c
+  lottie-ios: fcb5e73e17ba4c983140b7d21095c834b3087418
+  R.swift: 0af0d882f49f03711415cb4e5215daa977d8a480
+  SwiftLint: c1de071d9d08c8aba837545f6254315bc900e211
+
+PODFILE CHECKSUM: 95e0c6d0874550ed0ee6612c2a51bbc7966057c2
+
+COCOAPODS: 1.15.2
