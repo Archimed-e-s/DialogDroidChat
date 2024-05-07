@@ -1,0 +1,27 @@
+/* 
+  Localizable.strings
+  DialogDroid
+
+  Created by mac on 07.05.2024.
+  
+*/
+
+"mainScreenTitle" = "Main Screen";
+"mainScreenCenterLabel" = "Start communicationg with the AI";
+
+"settingsScreenTitle" = "Settings";
+
+"settingsMusicItem" = "Music";
+"settingsDeleteChatItem" = "Delete all chat history";
+"settingsAboutItem" = "About appplication";
+
+"musicSettingsScreenTitle" = "Music settings";
+"musicSettingsScreenSwitchLabel" = "Play background music";
+
+"musicCollectionItemSoft" = "Soft Music";
+"musicCollectionItemRock" = "Rock Music";
+"musicCollectionItemElectro" = "Electro Music";
+"musicCollectionItemTechno" = "Techno Music";
+"musicCollectionItemJazz" = "Jazz Music";
+"musicCollectionItemPop" = "Pop Music";
+"musicCollectionItemLightBeat" = "Lo - fi";

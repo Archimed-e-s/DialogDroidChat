@@ -5,14 +5,13 @@ enum SetttingsScreenCollectionModel: CaseIterable {
     case deleteChatHistory
     case about
     var title: String {
-        #warning("Localization")
         switch self {
         case .music:
-            return "Music"
+            return R.string.localizable.settingsMusicItem()
         case .deleteChatHistory:
-            return "Delete all chat history"
+            return R.string.localizable.settingsDeleteChatItem()
         case .about:
-            return "About appplication"
+            return R.string.localizable.settingsAboutItem()
         }
     }
 }

@@ -10,6 +10,7 @@ class MainScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         checkIfLaunchBefore()
+        setupLabels()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -31,10 +32,11 @@ class MainScreenViewController: UIViewController {
     }
     // MARK: - Public Methods
     // MARK: - Private Methods
+    private func setupLabels() {
+        centerLabel.text = R.string.localizable.mainScreenCenterLabel()
+    }
     private func configureNavigationBar() {
-        #warning("Localization")
-        navigationItem.title = "Main Screen"
-//        navigationController?.navigationItem.title = "Main Screen" Navigation Controller не передается во View Controller
+        navigationItem.title = R.string.localizable.mainScreenTitle()
     }
     private func checkIfLaunchBefore() {
         if !serviceProvider.applicationStorage.isLaunchingBefore {

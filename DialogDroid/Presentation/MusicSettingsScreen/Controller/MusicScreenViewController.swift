@@ -14,7 +14,7 @@ final class MusicScreenViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         configureCollection()
-        print("test3")
+        setupLabels()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -29,7 +29,6 @@ final class MusicScreenViewController: UIViewController {
             scrollPosition: .centeredVertically
         )
     }
-//    goToMusicSettings
     // MARK: - Actions
     @IBAction private func switchValueDidChange(_ sender: UISwitch) {
         print(#function)
@@ -39,12 +38,14 @@ final class MusicScreenViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     // MARK: - Private Methods
+    private func setupLabels() {
+        enableMusicLabel.text = R.string.localizable.musicSettingsScreenSwitchLabel()
+    }
     private func selectCurrentMusic(_ music: MusicCollection) {
         print(#function)
     }
     private func configureNavigationBar() {
-        #warning("Localization")
-        navigationItem.title = "Music Settings"
+        navigationItem.title = R.string.localizable.musicSettingsScreenTitle()
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
@@ -71,7 +72,10 @@ extension MusicScreenViewController: UICollectionViewDataSource {
         _ collectionView: UICollectionView,
         cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MusicSettingsCollectionViewCell", for: indexPath) as? MusicSettingsCollectionViewCell else {
+        guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: "MusicSettingsCollectionViewCell",
+            for: indexPath
+        ) as? MusicSettingsCollectionViewCell else {
             return UICollectionViewCell()
         }
         cell.configure(with: musicModel[indexPath.item])
@@ -81,7 +85,7 @@ extension MusicScreenViewController: UICollectionViewDataSource {
     // MARK: - UICollectionViewDelegate
 extension MusicScreenViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let selectedIndex{
+        if selectedIndex != nil {
             collectionView.deselectItem(at: indexPath, animated: false)
         }
         collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredVertically)

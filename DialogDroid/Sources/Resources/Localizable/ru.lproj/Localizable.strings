@@ -1,0 +1,27 @@
+/* 
+  Localizable.strings
+  DialogDroid
+
+  Created by mac on 07.05.2024.
+  
+*/
+
+"mainScreenTitle" = "Главный экран";
+"mainScreenCenterLabel" = "Начни общение с ИИ";
+
+"settingsScreenTitle" = "Настройки";
+
+"settingsMusicItem" = "Музыка";
+"settingsDeleteChatItem" = "Удалить историю чата";
+"settingsAboutItem" = "О приложении";
+
+"musicSettingsScreenTitle" = "Настройки музыки";
+"musicSettingsScreenSwitchLabel" = "Включить фоновую музыку";
+
+"musicCollectionItemSoft" = "Легкая музыка";
+"musicCollectionItemRock" = "Рок музыка";
+"musicCollectionItemElectro" = "Электро";
+"musicCollectionItemTechno" = "Техно";
+"musicCollectionItemJazz" = "Джаз";
+"musicCollectionItemPop" = "Поп-музыка";
+"musicCollectionItemLightBeat" = "Lo - Fi";

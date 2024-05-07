@@ -1,10 +1,10 @@
 import UIKit
 
 final class SettingsScreenViewController: UIViewController {
-// MARK: - Private properties
+    // MARK: - Private properties
     @IBOutlet private weak var collectionView: UICollectionView!
     private let screenModel = SetttingsScreenCollectionModel.allCases
-// MARK: - Life Cycle
+    // MARK: - Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,14 +30,12 @@ final class SettingsScreenViewController: UIViewController {
     }
     // MARK: - Private Methods
     private func configureNavigationBar() {
-        #warning("Localization")
-        navigationItem.title = "Main Screen"
-//        navigationController?.navigationItem.title = "Main Screen" Navigation Controller не передается во View Controller
+        navigationItem.title = R.string.localizable.settingsScreenTitle()
 
     }
 }
 
-// MARK: - UICollectionViewDataSource
+    // MARK: - UICollectionViewDataSource
 
 extension SettingsScreenViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -58,7 +56,7 @@ extension SettingsScreenViewController: UICollectionViewDataSource {
     }
 }
 
-// MARK: - UICollectionViewDelegate
+    // MARK: - UICollectionViewDelegate
 
 extension SettingsScreenViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -74,7 +72,7 @@ extension SettingsScreenViewController: UICollectionViewDelegate {
     }
 }
 
-// MARK: - UICollectionViewDelegateFlowLayout
+    // MARK: - UICollectionViewDelegateFlowLayout
 
 extension SettingsScreenViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(
