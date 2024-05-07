@@ -3,7 +3,7 @@ import UIKit
 final class MusicSettingsCollectionViewCell: UICollectionViewCell {
     // MARK: - Overriding Properties
     override var isSelected: Bool {
-        didSet{
+        didSet {
             updateSelectedState(isSelected: isSelected)
         }
     }

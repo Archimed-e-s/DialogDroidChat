@@ -5,10 +5,11 @@ class MainScreenViewController: UIViewController {
     // MARK: - Private Properties
     @IBOutlet private weak var animatedViewContainer: UIView!
     @IBOutlet private weak var centerLabel: UILabel!
+    private let serviceProvider: ServicesProvider = DefaultServicesProvider.shared
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("test")
+        checkIfLaunchBefore()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -34,7 +35,11 @@ class MainScreenViewController: UIViewController {
         #warning("Localization")
         navigationItem.title = "Main Screen"
 //        navigationController?.navigationItem.title = "Main Screen" Navigation Controller не передается во View Controller
-
+    }
+    private func checkIfLaunchBefore() {
+        if !serviceProvider.applicationStorage.isLaunchingBefore {
+            serviceProvider.applicationStorage.isLaunchingBefore = true
+        }
     }
 }
 

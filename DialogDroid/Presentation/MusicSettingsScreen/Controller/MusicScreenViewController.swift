@@ -7,6 +7,7 @@ final class MusicScreenViewController: UIViewController {
     @IBOutlet private weak var enableMusicLabel: UILabel!
     private var selectedIndex: IndexPath?
     private let musicModel: [MusicCollection] = MusicCollection.allCases
+    private let servicesProvider: ServicesProvider = DefaultServicesProvider.shared
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,10 +20,23 @@ final class MusicScreenViewController: UIViewController {
         super.viewWillAppear(animated)
         configureNavigationBar()
     }
+    override func viewIsAppearing(_ animated: Bool) {
+        super.viewIsAppearing(animated)
+        enableMusicSwitch.setOn(servicesProvider.settingStorage.isMusicOn, animated: animated)
+        collectionView.selectItem(
+            at: IndexPath(item: servicesProvider.settingStorage.selectedMusicIndex, section: 0),
+            animated: animated,
+            scrollPosition: .centeredVertically
+        )
+    }
 //    goToMusicSettings
     // MARK: - Actions
     @IBAction private func switchValueDidChange(_ sender: UISwitch) {
         print(#function)
+        servicesProvider.settingStorage.isMusicOn = sender.isOn
+    }
+    @IBAction private func backButtonDidTap(_ sender: UIBarButtonItem) {
+        navigationController?.popViewController(animated: true)
     }
     // MARK: - Private Methods
     private func selectCurrentMusic(_ music: MusicCollection) {
@@ -73,6 +87,7 @@ extension MusicScreenViewController: UICollectionViewDelegate {
         collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredVertically)
         selectedIndex = indexPath
         selectCurrentMusic(musicModel[indexPath.item])
+        servicesProvider.settingStorage.selectedMusicIndex = indexPath.item
     }
 }
     // MARK: - UICollectionViewDelegateFlowLayout

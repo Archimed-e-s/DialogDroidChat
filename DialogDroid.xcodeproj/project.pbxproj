@@ -16,6 +16,11 @@
 		045AC7EA2BE994D20089E49A /* MusicSettingsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045AC7E92BE994D20089E49A /* MusicSettingsCollectionViewCell.xib */; };
 		045AC7EB2BE994D20089E49A /* MusicSettingsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AC7E82BE994D20089E49A /* MusicSettingsCollectionViewCell.swift */; };
 		045AC7ED2BE9A8730089E49A /* MusicScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AC7EC2BE9A8730089E49A /* MusicScreenModel.swift */; };
+		045AC7F22BE9B4760089E49A /* UserDefaultStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AC7F12BE9B4760089E49A /* UserDefaultStorage.swift */; };
+		045AC7F42BE9B48F0089E49A /* ApplicationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AC7F32BE9B48F0089E49A /* ApplicationSettings.swift */; };
+		045AC7F62BE9B4FC0089E49A /* ApplicationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AC7F52BE9B4FC0089E49A /* ApplicationStorage.swift */; };
+		045AC7F92BE9B6940089E49A /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AC7F82BE9B6940089E49A /* Bundle+Extensions.swift */; };
+		045AC7FB2BE9B91C0089E49A /* SettingsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AC7FA2BE9B91C0089E49A /* SettingsProvider.swift */; };
 		04DF28D72BE49C1C008247B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF28D62BE49C1C008247B1 /* AppDelegate.swift */; };
 		04DF28D92BE49C1C008247B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF28D82BE49C1C008247B1 /* SceneDelegate.swift */; };
 		04DF28DB2BE49C1C008247B1 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF28DA2BE49C1C008247B1 /* MainScreenViewController.swift */; };
@@ -36,6 +41,11 @@
 		045AC7E82BE994D20089E49A /* MusicSettingsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSettingsCollectionViewCell.swift; sourceTree = "<group>"; };
 		045AC7E92BE994D20089E49A /* MusicSettingsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicSettingsCollectionViewCell.xib; sourceTree = "<group>"; };
 		045AC7EC2BE9A8730089E49A /* MusicScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MusicScreenModel.swift; path = ../../../../../../Documents/MusicScreenModel.swift; sourceTree = "<group>"; };
+		045AC7F12BE9B4760089E49A /* UserDefaultStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultStorage.swift; sourceTree = "<group>"; };
+		045AC7F32BE9B48F0089E49A /* ApplicationSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationSettings.swift; sourceTree = "<group>"; };
+		045AC7F52BE9B4FC0089E49A /* ApplicationStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationStorage.swift; sourceTree = "<group>"; };
+		045AC7F82BE9B6940089E49A /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
+		045AC7FA2BE9B91C0089E49A /* SettingsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProvider.swift; sourceTree = "<group>"; };
 		04DF28D32BE49C1C008247B1 /* DialogDroid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DialogDroid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04DF28D62BE49C1C008247B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04DF28D82BE49C1C008247B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +166,41 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		045AC7EE2BE9B4330089E49A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				045AC7F02BE9B4540089E49A /* Persistency */,
+				045AC7EF2BE9B4400089E49A /* ServiceProvider */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		045AC7EF2BE9B4400089E49A /* ServiceProvider */ = {
+			isa = PBXGroup;
+			children = (
+				045AC7FA2BE9B91C0089E49A /* SettingsProvider.swift */,
+			);
+			path = ServiceProvider;
+			sourceTree = "<group>";
+		};
+		045AC7F02BE9B4540089E49A /* Persistency */ = {
+			isa = PBXGroup;
+			children = (
+				045AC7F12BE9B4760089E49A /* UserDefaultStorage.swift */,
+				045AC7F32BE9B48F0089E49A /* ApplicationSettings.swift */,
+				045AC7F52BE9B4FC0089E49A /* ApplicationStorage.swift */,
+			);
+			path = Persistency;
+			sourceTree = "<group>";
+		};
+		045AC7F72BE9B66D0089E49A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				045AC7F82BE9B6940089E49A /* Bundle+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		04DF28CA2BE49C1C008247B1 = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +222,8 @@
 		04DF28D52BE49C1C008247B1 /* DialogDroid */ = {
 			isa = PBXGroup;
 			children = (
+				045AC7F72BE9B66D0089E49A /* Extensions */,
+				045AC7EE2BE9B4330089E49A /* Services */,
 				04DF28F32BE4A074008247B1 /* Presentation */,
 				04DF28EF2BE4A004008247B1 /* Application */,
 				04DF28EA2BE49D23008247B1 /* Sources */,
@@ -440,15 +487,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				045AC7F42BE9B48F0089E49A /* ApplicationSettings.swift in Sources */,
+				045AC7F22BE9B4760089E49A /* UserDefaultStorage.swift in Sources */,
 				045AC7D22BE8708B0089E49A /* CornerView.swift in Sources */,
 				045AC7E12BE898760089E49A /* SetttingsScreenCollectionModel.swift in Sources */,
 				04DF28DB2BE49C1C008247B1 /* MainScreenViewController.swift in Sources */,
 				04DF28D72BE49C1C008247B1 /* AppDelegate.swift in Sources */,
+				045AC7F92BE9B6940089E49A /* Bundle+Extensions.swift in Sources */,
 				045AC7ED2BE9A8730089E49A /* MusicScreenModel.swift in Sources */,
 				04DF28D92BE49C1C008247B1 /* SceneDelegate.swift in Sources */,
+				045AC7F62BE9B4FC0089E49A /* ApplicationStorage.swift in Sources */,
 				045AC7EB2BE994D20089E49A /* MusicSettingsCollectionViewCell.swift in Sources */,
 				045AC7DC2BE8755D0089E49A /* SettingsCollectionViewCell.swift in Sources */,
 				04DF28F22BE4A05D008247B1 /* R.generated.swift in Sources */,
+				045AC7FB2BE9B91C0089E49A /* SettingsProvider.swift in Sources */,
 				045AC7E72BE98F7B0089E49A /* MusicScreenViewController.swift in Sources */,
 				045AC7D52BE873D70089E49A /* SettingsScreenViewController.swift in Sources */,
 			);

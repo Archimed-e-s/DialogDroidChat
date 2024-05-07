@@ -254,6 +254,9 @@
                     <navigationItem key="navigationItem" title="MusicSettings" id="owT-Y1-fkU">
                         <barButtonItem key="leftBarButtonItem" image="arrow.left.circle" catalog="system" id="4Md-Iz-4C4">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="backButtonDidTap:" destination="bas-8m-hBv" id="Ve1-c0-c0Z"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
