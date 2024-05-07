@@ -1,8 +1,18 @@
-//
-//  SetttingsScreenCollectionModel.swift
-//  DialogDroid
-//
-//  Created by mac on 06.05.2024.
-//
-
 import Foundation
+
+enum SetttingsScreenCollectionModel: CaseIterable {
+    case music
+    case deleteChatHistory
+    case about
+    var title: String {
+        #warning("Localization")
+        switch self {
+        case .music:
+            return "Music"
+        case .deleteChatHistory:
+            return "Delete all chat history"
+        case .about:
+            return "About appplication"
+        }
+    }
+}

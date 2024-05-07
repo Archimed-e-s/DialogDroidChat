@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -135,14 +136,139 @@
                     <connections>
                         <outlet property="animatedViewContainer" destination="Xas-zQ-kKX" id="AAj-uH-4BH"/>
                         <outlet property="centerLabel" destination="ihz-xW-MUt" id="QCF-fq-PqQ"/>
+                        <segue destination="Vb8-3t-Mdq" kind="show" identifier="goToSettings" id="Ggi-8W-VeA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1052.6717557251909" y="-27.464788732394368"/>
         </scene>
+        <!--Title2-->
+        <scene sceneID="CyC-ly-oox">
+            <objects>
+                <viewController id="Vb8-3t-Mdq" customClass="SettingsScreenViewController" customModule="DialogDroid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jdg-hL-ckP">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tWB-He-fDZ">
+                                <rect key="frame" x="16" y="111" width="361" height="699"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uQF-Re-1do">
+                                    <size key="itemSize" width="350" height="100"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SettingsCollectionViewCell" id="T08-6i-VUn">
+                                        <rect key="frame" x="5.666666666666667" y="0.0" width="350" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="qyS-9b-3vl">
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NTT-mJ-5na"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="NTT-mJ-5na" firstAttribute="trailing" secondItem="tWB-He-fDZ" secondAttribute="trailing" constant="16" id="9dZ-5u-wOi"/>
+                            <constraint firstItem="tWB-He-fDZ" firstAttribute="top" secondItem="NTT-mJ-5na" secondAttribute="top" constant="8" id="M9i-wh-MOz"/>
+                            <constraint firstItem="tWB-He-fDZ" firstAttribute="leading" secondItem="NTT-mJ-5na" secondAttribute="leading" constant="16" id="ala-xX-PZ1"/>
+                            <constraint firstItem="NTT-mJ-5na" firstAttribute="bottom" secondItem="tWB-He-fDZ" secondAttribute="bottom" constant="8" id="iun-dW-5Wq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title2" style="editor" id="0aQ-ar-bLQ">
+                        <barButtonItem key="leftBarButtonItem" image="arrow.left.circle" catalog="system" id="16r-Ga-Un4">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="backButtonDidTap:" destination="Vb8-3t-Mdq" id="4iV-ta-aUM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="tWB-He-fDZ" id="qq7-i2-Y4u"/>
+                        <segue destination="bas-8m-hBv" kind="show" identifier="goToMusicSettings" id="MiN-ps-pJN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vHp-Qr-to7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1862" y="-278"/>
+        </scene>
+        <!--MusicSettings-->
+        <scene sceneID="XPz-gB-z49">
+            <objects>
+                <viewController id="bas-8m-hBv" customClass="MusicScreenViewController" customModule="DialogDroid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6HB-Eg-Qri">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="r4h-YF-gM9">
+                                <rect key="frame" x="16" y="174" width="361" height="644"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pHj-fU-GRH">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enabled background sounds large large large" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bS0-fc-lwy">
+                                <rect key="frame" x="16" y="130.66666666666666" width="288" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="wid-s2-A3r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KDZ-7L-PId">
+                                <rect key="frame" x="320" y="127" width="49" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="47" id="MPS-FI-ICo"/>
+                                    <constraint firstAttribute="height" constant="31" id="NWJ-pd-UPA"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="switchValueDidChange:" destination="bas-8m-hBv" eventType="valueChanged" id="Lav-4e-f3U"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TKK-eh-aMz"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="TKK-eh-aMz" firstAttribute="trailing" secondItem="r4h-YF-gM9" secondAttribute="trailing" constant="16" id="21y-s2-pK1"/>
+                            <constraint firstItem="r4h-YF-gM9" firstAttribute="top" secondItem="KDZ-7L-PId" secondAttribute="bottom" constant="16" id="B5U-Vx-cPW"/>
+                            <constraint firstItem="bS0-fc-lwy" firstAttribute="centerY" secondItem="KDZ-7L-PId" secondAttribute="centerY" id="BbK-LZ-fUJ"/>
+                            <constraint firstItem="TKK-eh-aMz" firstAttribute="bottom" secondItem="r4h-YF-gM9" secondAttribute="bottom" id="ESk-c1-b10"/>
+                            <constraint firstItem="bS0-fc-lwy" firstAttribute="leading" secondItem="TKK-eh-aMz" secondAttribute="leading" constant="16" id="FT9-DK-fYF"/>
+                            <constraint firstItem="TKK-eh-aMz" firstAttribute="trailing" secondItem="KDZ-7L-PId" secondAttribute="trailing" constant="26" id="L8c-25-BDJ"/>
+                            <constraint firstItem="KDZ-7L-PId" firstAttribute="leading" secondItem="bS0-fc-lwy" secondAttribute="trailing" constant="16" id="WFk-ii-ZfJ"/>
+                            <constraint firstItem="KDZ-7L-PId" firstAttribute="top" secondItem="TKK-eh-aMz" secondAttribute="top" constant="24" id="gCp-WT-wgA"/>
+                            <constraint firstItem="r4h-YF-gM9" firstAttribute="leading" secondItem="TKK-eh-aMz" secondAttribute="leading" constant="16" id="hQe-Pe-Na1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="MusicSettings" id="owT-Y1-fkU">
+                        <barButtonItem key="leftBarButtonItem" image="arrow.left.circle" catalog="system" id="4Md-Iz-4C4">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="r4h-YF-gM9" id="adk-uT-2T0"/>
+                        <outlet property="enableMusicLabel" destination="bS0-fc-lwy" id="vzY-BG-gQQ"/>
+                        <outlet property="enableMusicSwitch" destination="KDZ-7L-PId" id="cyb-WX-PBd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oa7-P8-GtE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2694" y="-278"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="arrow.left.circle" catalog="system" width="128" height="123"/>
         <image name="gearshape" catalog="system" width="128" height="123"/>
         <image name="link.circle" catalog="system" width="128" height="123"/>
         <systemColor name="labelColor">

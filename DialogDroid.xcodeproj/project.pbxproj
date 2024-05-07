@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		045AC7D22BE8708B0089E49A /* CornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AC7D12BE8708B0089E49A /* CornerView.swift */; };
+		045AC7D52BE873D70089E49A /* SettingsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AC7D42BE873D70089E49A /* SettingsScreenViewController.swift */; };
+		045AC7DB2BE8755D0089E49A /* SettingsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045AC7DA2BE8755D0089E49A /* SettingsCollectionViewCell.xib */; };
+		045AC7DC2BE8755D0089E49A /* SettingsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AC7D92BE8755D0089E49A /* SettingsCollectionViewCell.swift */; };
+		045AC7E12BE898760089E49A /* SetttingsScreenCollectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AC7E02BE898760089E49A /* SetttingsScreenCollectionModel.swift */; };
+		045AC7E72BE98F7B0089E49A /* MusicScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AC7E62BE98F7B0089E49A /* MusicScreenViewController.swift */; };
+		045AC7EA2BE994D20089E49A /* MusicSettingsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045AC7E92BE994D20089E49A /* MusicSettingsCollectionViewCell.xib */; };
+		045AC7EB2BE994D20089E49A /* MusicSettingsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AC7E82BE994D20089E49A /* MusicSettingsCollectionViewCell.swift */; };
+		045AC7ED2BE9A8730089E49A /* MusicScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AC7EC2BE9A8730089E49A /* MusicScreenModel.swift */; };
 		04DF28D72BE49C1C008247B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF28D62BE49C1C008247B1 /* AppDelegate.swift */; };
 		04DF28D92BE49C1C008247B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF28D82BE49C1C008247B1 /* SceneDelegate.swift */; };
 		04DF28DB2BE49C1C008247B1 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF28DA2BE49C1C008247B1 /* MainScreenViewController.swift */; };
@@ -20,6 +28,14 @@
 
 /* Begin PBXFileReference section */
 		045AC7D12BE8708B0089E49A /* CornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerView.swift; sourceTree = "<group>"; };
+		045AC7D42BE873D70089E49A /* SettingsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenViewController.swift; sourceTree = "<group>"; };
+		045AC7D92BE8755D0089E49A /* SettingsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCollectionViewCell.swift; sourceTree = "<group>"; };
+		045AC7DA2BE8755D0089E49A /* SettingsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsCollectionViewCell.xib; sourceTree = "<group>"; };
+		045AC7E02BE898760089E49A /* SetttingsScreenCollectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetttingsScreenCollectionModel.swift; sourceTree = "<group>"; };
+		045AC7E62BE98F7B0089E49A /* MusicScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicScreenViewController.swift; sourceTree = "<group>"; };
+		045AC7E82BE994D20089E49A /* MusicSettingsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSettingsCollectionViewCell.swift; sourceTree = "<group>"; };
+		045AC7E92BE994D20089E49A /* MusicSettingsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicSettingsCollectionViewCell.xib; sourceTree = "<group>"; };
+		045AC7EC2BE9A8730089E49A /* MusicScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MusicScreenModel.swift; path = ../../../../../../Documents/MusicScreenModel.swift; sourceTree = "<group>"; };
 		04DF28D32BE49C1C008247B1 /* DialogDroid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DialogDroid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04DF28D62BE49C1C008247B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04DF28D82BE49C1C008247B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +76,84 @@
 				045AC7D12BE8708B0089E49A /* CornerView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		045AC7D32BE873BA0089E49A /* SettingsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				045AC7DF2BE8983B0089E49A /* Controller */,
+				045AC7DE2BE898340089E49A /* View */,
+				045AC7DD2BE8982E0089E49A /* Model */,
+			);
+			path = SettingsScreen;
+			sourceTree = "<group>";
+		};
+		045AC7D62BE875150089E49A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				045AC7D92BE8755D0089E49A /* SettingsCollectionViewCell.swift */,
+				045AC7DA2BE8755D0089E49A /* SettingsCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		045AC7DD2BE8982E0089E49A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				045AC7E02BE898760089E49A /* SetttingsScreenCollectionModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		045AC7DE2BE898340089E49A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				045AC7D62BE875150089E49A /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		045AC7DF2BE8983B0089E49A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				045AC7D42BE873D70089E49A /* SettingsScreenViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		045AC7E22BE98F370089E49A /* MusicSettingsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				045AC7E52BE98F5E0089E49A /* Model */,
+				045AC7E42BE98F570089E49A /* View */,
+				045AC7E32BE98F500089E49A /* Controller */,
+			);
+			path = MusicSettingsScreen;
+			sourceTree = "<group>";
+		};
+		045AC7E32BE98F500089E49A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				045AC7E62BE98F7B0089E49A /* MusicScreenViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		045AC7E42BE98F570089E49A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				045AC7E82BE994D20089E49A /* MusicSettingsCollectionViewCell.swift */,
+				045AC7E92BE994D20089E49A /* MusicSettingsCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		045AC7E52BE98F5E0089E49A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				045AC7EC2BE9A8730089E49A /* MusicScreenModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		04DF28CA2BE49C1C008247B1 = {
@@ -136,6 +230,8 @@
 		04DF28F32BE4A074008247B1 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				045AC7E22BE98F370089E49A /* MusicSettingsScreen */,
+				045AC7D32BE873BA0089E49A /* SettingsScreen */,
 				045AC7CF2BE870600089E49A /* CustomElements */,
 				04DF28F62BE4A0A0008247B1 /* MainScreen */,
 				04DF28F52BE4A08A008247B1 /* Storyboard */,
@@ -250,6 +346,8 @@
 				04DF28E02BE49C1E008247B1 /* Assets.xcassets in Resources */,
 				04DF28E32BE49C1E008247B1 /* Base in Resources */,
 				04DF28DE2BE49C1C008247B1 /* Base in Resources */,
+				045AC7DB2BE8755D0089E49A /* SettingsCollectionViewCell.xib in Resources */,
+				045AC7EA2BE994D20089E49A /* MusicSettingsCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,10 +441,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				045AC7D22BE8708B0089E49A /* CornerView.swift in Sources */,
+				045AC7E12BE898760089E49A /* SetttingsScreenCollectionModel.swift in Sources */,
 				04DF28DB2BE49C1C008247B1 /* MainScreenViewController.swift in Sources */,
 				04DF28D72BE49C1C008247B1 /* AppDelegate.swift in Sources */,
+				045AC7ED2BE9A8730089E49A /* MusicScreenModel.swift in Sources */,
 				04DF28D92BE49C1C008247B1 /* SceneDelegate.swift in Sources */,
+				045AC7EB2BE994D20089E49A /* MusicSettingsCollectionViewCell.swift in Sources */,
+				045AC7DC2BE8755D0089E49A /* SettingsCollectionViewCell.swift in Sources */,
 				04DF28F22BE4A05D008247B1 /* R.generated.swift in Sources */,
+				045AC7E72BE98F7B0089E49A /* MusicScreenViewController.swift in Sources */,
+				045AC7D52BE873D70089E49A /* SettingsScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

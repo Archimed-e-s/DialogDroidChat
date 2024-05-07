@@ -17,6 +17,7 @@ class MainScreenViewController: UIViewController {
     // MARK: - Actions
     @IBAction private func settingsButtonDidTap(_ sender: Any) {
         print(#function)
+        performSegue(withIdentifier: "goToSettings", sender: nil)
     }
     @IBAction private func shareButtonDidTap(_ sender: Any) {
         print(#function)
@@ -30,8 +31,21 @@ class MainScreenViewController: UIViewController {
     // MARK: - Public Methods
     // MARK: - Private Methods
     private func configureNavigationBar() {
+        #warning("Localization")
         navigationItem.title = "Main Screen"
 //        navigationController?.navigationItem.title = "Main Screen" Navigation Controller не передается во View Controller
 
+    }
+}
+
+// MARK: - Segue
+extension MainScreenViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "goToSettings":
+            guard let destinationController = segue.destination as? SettingsScreenViewController else { return }
+        default:
+            super.prepare(for: segue, sender: sender)
+        }
     }
 }

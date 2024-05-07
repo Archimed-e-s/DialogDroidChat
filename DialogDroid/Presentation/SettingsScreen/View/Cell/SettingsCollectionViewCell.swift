@@ -1,21 +1,25 @@
-//
-//  SettingsCollectionViewCell.swift
-//  DialogDroid
-//
-//  Created by mac on 06.05.2024.
-//
-
 import UIKit
 
 class SettingsCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var cellBackgroundView: UIView!
-    @IBOutlet weak var titleLabel: UILabel!
+    // MARK: - Private properties
+    @IBOutlet private weak var cellBackgroundView: UIView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    // MARK: - Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        cellBackgroundView.layer.cornerRadius = 8
+        cellBackgroundView.layer.masksToBounds = true
     }
-
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        titleLabel.text = nil
+    }
+    // MARK: - Public Methods
+    func configure(from model: SetttingsScreenCollectionModel) {
+        titleLabel.text = model.title
+    }
+    // MARK: - Actions
     @IBAction func nextButtonDidTap(_ sender: Any) {
     }
 }

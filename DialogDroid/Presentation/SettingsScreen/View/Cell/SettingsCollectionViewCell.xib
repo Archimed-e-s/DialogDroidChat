@@ -35,7 +35,7 @@
                                     <action selector="nextButtonDidTap:" destination="gTV-IL-0wX" eventType="touchUpInside" id="Q1r-cg-RGl"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Длинное название пункта настроек" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfI-DS-pjP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Длинное название пункта настроек" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfI-DS-pjP">
                                 <rect key="frame" x="16" y="73.666666666666671" width="493" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="j9S-ud-iIX"/>
