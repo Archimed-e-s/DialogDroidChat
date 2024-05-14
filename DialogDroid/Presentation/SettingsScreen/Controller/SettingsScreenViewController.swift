@@ -4,6 +4,7 @@ final class SettingsScreenViewController: UIViewController {
     // MARK: - Private properties
     @IBOutlet private weak var collectionView: UICollectionView!
     private let screenModel = SetttingsScreenCollectionModel.allCases
+    private let serviceProvider: ServicesProvider = DefaultServicesProvider.shared
     // MARK: - Life Cycle
 
     override func viewDidLoad() {
@@ -13,6 +14,14 @@ final class SettingsScreenViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         configureNavigationBar()
+    }
+
+    @IBAction private func backButtonDidTap(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    // MARK: - Private Methods
+    private func configureNavigationBar() {
+        navigationItem.title = R.string.localizable.settingsScreenTitle()
     }
     private func configureCollection() {
         collectionView.delegate = self
@@ -25,13 +34,26 @@ final class SettingsScreenViewController: UIViewController {
             forCellWithReuseIdentifier: "SettingsCollectionViewCell"
         )
     }
-    @IBAction private func backButtonDidTap(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+    private func presentDeleteAllMessages(deleteHandler: @escaping () -> Void) {
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { _ in deleteHandler() }
+        let actions = [cancelAction, deleteAction]
+        let alertController = UIAlertController(
+            title: "Delete All Messages?",
+            message: "Do you really want to delete all messages? This action cannot be undone!",
+            preferredStyle: .alert
+        )
+        actions.forEach({ alertController.addAction($0) })
+        present(alertController, animated: true)
     }
-    // MARK: - Private Methods
-    private func configureNavigationBar() {
-        navigationItem.title = R.string.localizable.settingsScreenTitle()
-
+    private func presentAboutAlert() {
+        let alertController = UIAlertController(
+            title: "About the application",
+            message: "DialogDroid\nCreated by Archimedes in 2024",
+            preferredStyle: .alert
+        )
+        alertController.addAction(UIAlertAction(title: "Ok", style: .default))
+        present(alertController, animated: true)
     }
 }
 
@@ -65,9 +87,17 @@ extension SettingsScreenViewController: UICollectionViewDelegate {
         case .music:
             performSegue(withIdentifier: "goToMusicSettings", sender: nil)
         case .deleteChatHistory:
-            break
+            presentDeleteAllMessages { [weak self] in
+                do{
+                    try self?.serviceProvider.coreDataManager.deleteAllMessages()
+                    let result = try self? .serviceProvider.coreDataManager.getAllChatMessages()
+                    print(result)
+                } catch {
+                    print(error)
+                }
+            }
         case .about:
-            break
+            presentAboutAlert()
         }
     }
 }

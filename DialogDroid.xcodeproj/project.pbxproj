@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		044837E22BEAFCCC00069C53 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044837E12BEAFCCC00069C53 /* CoreDataService.swift */; };
+		044837E42BEAFCD800069C53 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044837E32BEAFCD800069C53 /* CoreDataManager.swift */; };
+		044837E72BEB004200069C53 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 044837E52BEB004200069C53 /* DataModel.xcdatamodeld */; };
+		044837EE2BEB01BF00069C53 /* CoreDataChatMessage+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044837EC2BEB01BF00069C53 /* CoreDataChatMessage+CoreDataClass.swift */; };
+		044837EF2BEB01BF00069C53 /* CoreDataChatMessage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044837ED2BEB01BF00069C53 /* CoreDataChatMessage+CoreDataProperties.swift */; };
+		044837F42BEB072000069C53 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044837F32BEB072000069C53 /* MessageModel.swift */; };
 		045AC7D22BE8708B0089E49A /* CornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AC7D12BE8708B0089E49A /* CornerView.swift */; };
 		045AC7D52BE873D70089E49A /* SettingsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AC7D42BE873D70089E49A /* SettingsScreenViewController.swift */; };
 		045AC7DB2BE8755D0089E49A /* SettingsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045AC7DA2BE8755D0089E49A /* SettingsCollectionViewCell.xib */; };
@@ -33,6 +39,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		044837E12BEAFCCC00069C53 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		044837E32BEAFCD800069C53 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		044837E62BEB004200069C53 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		044837EC2BEB01BF00069C53 /* CoreDataChatMessage+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataChatMessage+CoreDataClass.swift"; sourceTree = "<group>"; };
+		044837ED2BEB01BF00069C53 /* CoreDataChatMessage+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataChatMessage+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		044837F32BEB072000069C53 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
 		045AC7D12BE8708B0089E49A /* CornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerView.swift; sourceTree = "<group>"; };
 		045AC7D42BE873D70089E49A /* SettingsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenViewController.swift; sourceTree = "<group>"; };
 		045AC7D92BE8755D0089E49A /* SettingsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -75,6 +87,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		044837DF2BEAFCA200069C53 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				044837E02BEAFCB500069C53 /* Model */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		044837E02BEAFCB500069C53 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				044837EC2BEB01BF00069C53 /* CoreDataChatMessage+CoreDataClass.swift */,
+				044837ED2BEB01BF00069C53 /* CoreDataChatMessage+CoreDataProperties.swift */,
+				044837E12BEAFCCC00069C53 /* CoreDataService.swift */,
+				044837E32BEAFCD800069C53 /* CoreDataManager.swift */,
+				044837E52BEB004200069C53 /* DataModel.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		044837F12BEB06E700069C53 /* ChatScreen */ = {
+			isa = PBXGroup;
+			children = (
+				044837F22BEB06EF00069C53 /* Model */,
+			);
+			path = ChatScreen;
+			sourceTree = "<group>";
+		};
+		044837F22BEB06EF00069C53 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				044837F32BEB072000069C53 /* MessageModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		045AC7CF2BE870600089E49A /* CustomElements */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +237,7 @@
 		045AC7F02BE9B4540089E49A /* Persistency */ = {
 			isa = PBXGroup;
 			children = (
+				044837DF2BEAFCA200069C53 /* CoreData */,
 				045AC7F12BE9B4760089E49A /* UserDefaultStorage.swift */,
 				045AC7F32BE9B48F0089E49A /* ApplicationSettings.swift */,
 				045AC7F52BE9B4FC0089E49A /* ApplicationStorage.swift */,
@@ -289,6 +338,7 @@
 		04DF28F32BE4A074008247B1 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				044837F12BEB06E700069C53 /* ChatScreen */,
 				045AC7E22BE98F370089E49A /* MusicSettingsScreen */,
 				045AC7D32BE873BA0089E49A /* SettingsScreen */,
 				045AC7CF2BE870600089E49A /* CustomElements */,
@@ -501,11 +551,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				044837EE2BEB01BF00069C53 /* CoreDataChatMessage+CoreDataClass.swift in Sources */,
+				044837EF2BEB01BF00069C53 /* CoreDataChatMessage+CoreDataProperties.swift in Sources */,
+				044837E22BEAFCCC00069C53 /* CoreDataService.swift in Sources */,
 				045AC7F42BE9B48F0089E49A /* ApplicationSettings.swift in Sources */,
 				045AC7F22BE9B4760089E49A /* UserDefaultStorage.swift in Sources */,
 				045AC7D22BE8708B0089E49A /* CornerView.swift in Sources */,
 				045AC7E12BE898760089E49A /* SetttingsScreenCollectionModel.swift in Sources */,
 				04DF28DB2BE49C1C008247B1 /* MainScreenViewController.swift in Sources */,
+				044837E42BEAFCD800069C53 /* CoreDataManager.swift in Sources */,
 				04DF28D72BE49C1C008247B1 /* AppDelegate.swift in Sources */,
 				045AC7F92BE9B6940089E49A /* Bundle+Extensions.swift in Sources */,
 				045AC7ED2BE9A8730089E49A /* MusicScreenModel.swift in Sources */,
@@ -513,8 +567,10 @@
 				045AC7F62BE9B4FC0089E49A /* ApplicationStorage.swift in Sources */,
 				045AC7EB2BE994D20089E49A /* MusicSettingsCollectionViewCell.swift in Sources */,
 				045AC7DC2BE8755D0089E49A /* SettingsCollectionViewCell.swift in Sources */,
+				044837E72BEB004200069C53 /* DataModel.xcdatamodeld in Sources */,
 				04DF28F22BE4A05D008247B1 /* R.generated.swift in Sources */,
 				045AC7FB2BE9B91C0089E49A /* SettingsProvider.swift in Sources */,
+				044837F42BEB072000069C53 /* MessageModel.swift in Sources */,
 				045AC7E72BE98F7B0089E49A /* MusicScreenViewController.swift in Sources */,
 				045AC7D52BE873D70089E49A /* SettingsScreenViewController.swift in Sources */,
 			);
@@ -766,6 +822,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		044837E52BEB004200069C53 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				044837E62BEB004200069C53 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 044837E62BEB004200069C53 /* DataModel.xcdatamodel */;
+			name = DataModel.xcdatamodeld;
+			path = /Users/mac/Desktop/DialogDroid/DialogDroid/Services/Persistency/CoreData/Model/DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 04DF28CB2BE49C1C008247B1 /* Project object */;
 }
