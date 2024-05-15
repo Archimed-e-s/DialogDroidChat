@@ -31,8 +31,8 @@ final class MusicScreenViewController: UIViewController {
     }
     // MARK: - Actions
     @IBAction private func switchValueDidChange(_ sender: UISwitch) {
-        print(#function)
-        servicesProvider.settingStorage.isMusicOn = sender.isOn
+
+        servicesProvider.musicPlayerManager.changePlaying(isMusicOn: sender.isOn)
     }
     @IBAction private func backButtonDidTap(_ sender: UIBarButtonItem) {
         navigationController?.popViewController(animated: true)
@@ -91,7 +91,7 @@ extension MusicScreenViewController: UICollectionViewDelegate {
         collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredVertically)
         selectedIndex = indexPath
         selectCurrentMusic(musicModel[indexPath.item])
-        servicesProvider.settingStorage.selectedMusicIndex = indexPath.item
+        servicesProvider.musicPlayerManager.changeMusic(to: musicModel[indexPath.item])
     }
 }
     // MARK: - UICollectionViewDelegateFlowLayout

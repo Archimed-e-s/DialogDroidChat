@@ -13,6 +13,15 @@
 		044837EE2BEB01BF00069C53 /* CoreDataChatMessage+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044837EC2BEB01BF00069C53 /* CoreDataChatMessage+CoreDataClass.swift */; };
 		044837EF2BEB01BF00069C53 /* CoreDataChatMessage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044837ED2BEB01BF00069C53 /* CoreDataChatMessage+CoreDataProperties.swift */; };
 		044837F42BEB072000069C53 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044837F32BEB072000069C53 /* MessageModel.swift */; };
+		045537882BF437CD00CB8863 /* Magic - Rude.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 045537812BF437CD00CB8863 /* Magic - Rude.mp3 */; };
+		045537892BF437CD00CB8863 /* saypink! - БРОСАЙ.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 045537822BF437CD00CB8863 /* saypink! - БРОСАЙ.mp3 */; };
+		0455378A2BF437CD00CB8863 /* PINK EYES! - Сон.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 045537832BF437CD00CB8863 /* PINK EYES! - Сон.mp3 */; };
+		0455378B2BF437CD00CB8863 /* Пошлая Молли - 2013.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 045537842BF437CD00CB8863 /* Пошлая Молли - 2013.mp3 */; };
+		0455378C2BF437CD00CB8863 /* КОСМОНАВТОВ НЕТ - вход прости Юра мы всё потеряли.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 045537852BF437CD00CB8863 /* КОСМОНАВТОВ НЕТ - вход прости Юра мы всё потеряли.mp3 */; };
+		0455378D2BF437CD00CB8863 /* saypink kolenki.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 045537862BF437CD00CB8863 /* saypink kolenki.mp3 */; };
+		0455378E2BF437CD00CB8863 /* LONEVATE feat. 18th - запах сирени.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 045537872BF437CD00CB8863 /* LONEVATE feat. 18th - запах сирени.mp3 */; };
+		045537912BF43CD200CB8863 /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045537902BF43CD200CB8863 /* MusicPlayer.swift */; };
+		045537932BF43DF200CB8863 /* MusicPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045537922BF43DF200CB8863 /* MusicPlayerManager.swift */; };
 		045AC7D22BE8708B0089E49A /* CornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AC7D12BE8708B0089E49A /* CornerView.swift */; };
 		045AC7D52BE873D70089E49A /* SettingsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AC7D42BE873D70089E49A /* SettingsScreenViewController.swift */; };
 		045AC7DB2BE8755D0089E49A /* SettingsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045AC7DA2BE8755D0089E49A /* SettingsCollectionViewCell.xib */; };
@@ -45,6 +54,15 @@
 		044837EC2BEB01BF00069C53 /* CoreDataChatMessage+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataChatMessage+CoreDataClass.swift"; sourceTree = "<group>"; };
 		044837ED2BEB01BF00069C53 /* CoreDataChatMessage+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataChatMessage+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		044837F32BEB072000069C53 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
+		045537812BF437CD00CB8863 /* Magic - Rude.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Magic - Rude.mp3"; sourceTree = "<group>"; };
+		045537822BF437CD00CB8863 /* saypink! - БРОСАЙ.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "saypink! - БРОСАЙ.mp3"; sourceTree = "<group>"; };
+		045537832BF437CD00CB8863 /* PINK EYES! - Сон.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "PINK EYES! - Сон.mp3"; sourceTree = "<group>"; };
+		045537842BF437CD00CB8863 /* Пошлая Молли - 2013.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Пошлая Молли - 2013.mp3"; sourceTree = "<group>"; };
+		045537852BF437CD00CB8863 /* КОСМОНАВТОВ НЕТ - вход прости Юра мы всё потеряли.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "КОСМОНАВТОВ НЕТ - вход прости Юра мы всё потеряли.mp3"; sourceTree = "<group>"; };
+		045537862BF437CD00CB8863 /* saypink kolenki.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "saypink kolenki.mp3"; sourceTree = "<group>"; };
+		045537872BF437CD00CB8863 /* LONEVATE feat. 18th - запах сирени.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "LONEVATE feat. 18th - запах сирени.mp3"; sourceTree = "<group>"; };
+		045537902BF43CD200CB8863 /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
+		045537922BF43DF200CB8863 /* MusicPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerManager.swift; sourceTree = "<group>"; };
 		045AC7D12BE8708B0089E49A /* CornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerView.swift; sourceTree = "<group>"; };
 		045AC7D42BE873D70089E49A /* SettingsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenViewController.swift; sourceTree = "<group>"; };
 		045AC7D92BE8755D0089E49A /* SettingsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -121,6 +139,29 @@
 				044837F32BEB072000069C53 /* MessageModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		045537802BF4359300CB8863 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				045537852BF437CD00CB8863 /* КОСМОНАВТОВ НЕТ - вход прости Юра мы всё потеряли.mp3 */,
+				045537842BF437CD00CB8863 /* Пошлая Молли - 2013.mp3 */,
+				045537872BF437CD00CB8863 /* LONEVATE feat. 18th - запах сирени.mp3 */,
+				045537812BF437CD00CB8863 /* Magic - Rude.mp3 */,
+				045537832BF437CD00CB8863 /* PINK EYES! - Сон.mp3 */,
+				045537862BF437CD00CB8863 /* saypink kolenki.mp3 */,
+				045537822BF437CD00CB8863 /* saypink! - БРОСАЙ.mp3 */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
+		0455378F2BF43CB500CB8863 /* MusicServices */ = {
+			isa = PBXGroup;
+			children = (
+				045537902BF43CD200CB8863 /* MusicPlayer.swift */,
+				045537922BF43DF200CB8863 /* MusicPlayerManager.swift */,
+			);
+			path = MusicServices;
 			sourceTree = "<group>";
 		};
 		045AC7CF2BE870600089E49A /* CustomElements */ = {
@@ -220,6 +261,7 @@
 		045AC7EE2BE9B4330089E49A /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				0455378F2BF43CB500CB8863 /* MusicServices */,
 				045AC7F02BE9B4540089E49A /* Persistency */,
 				045AC7EF2BE9B4400089E49A /* ServiceProvider */,
 			);
@@ -312,6 +354,7 @@
 		04DF28EC2BE49D41008247B1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				045537802BF4359300CB8863 /* Music */,
 				045AC7FC2BE9C1370089E49A /* Localizable */,
 				04DF28DF2BE49C1E008247B1 /* Assets.xcassets */,
 			);
@@ -457,8 +500,15 @@
 				045AC7FF2BE9C1610089E49A /* Localizable.strings in Resources */,
 				04DF28E32BE49C1E008247B1 /* Base in Resources */,
 				04DF28DE2BE49C1C008247B1 /* Base in Resources */,
+				045537882BF437CD00CB8863 /* Magic - Rude.mp3 in Resources */,
 				045AC7DB2BE8755D0089E49A /* SettingsCollectionViewCell.xib in Resources */,
+				0455378A2BF437CD00CB8863 /* PINK EYES! - Сон.mp3 in Resources */,
+				0455378E2BF437CD00CB8863 /* LONEVATE feat. 18th - запах сирени.mp3 in Resources */,
+				0455378B2BF437CD00CB8863 /* Пошлая Молли - 2013.mp3 in Resources */,
 				045AC7EA2BE994D20089E49A /* MusicSettingsCollectionViewCell.xib in Resources */,
+				0455378D2BF437CD00CB8863 /* saypink kolenki.mp3 in Resources */,
+				045537892BF437CD00CB8863 /* saypink! - БРОСАЙ.mp3 in Resources */,
+				0455378C2BF437CD00CB8863 /* КОСМОНАВТОВ НЕТ - вход прости Юра мы всё потеряли.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,7 +605,9 @@
 				044837EF2BEB01BF00069C53 /* CoreDataChatMessage+CoreDataProperties.swift in Sources */,
 				044837E22BEAFCCC00069C53 /* CoreDataService.swift in Sources */,
 				045AC7F42BE9B48F0089E49A /* ApplicationSettings.swift in Sources */,
+				045537932BF43DF200CB8863 /* MusicPlayerManager.swift in Sources */,
 				045AC7F22BE9B4760089E49A /* UserDefaultStorage.swift in Sources */,
+				045537912BF43CD200CB8863 /* MusicPlayer.swift in Sources */,
 				045AC7D22BE8708B0089E49A /* CornerView.swift in Sources */,
 				045AC7E12BE898760089E49A /* SetttingsScreenCollectionModel.swift in Sources */,
 				04DF28DB2BE49C1C008247B1 /* MainScreenViewController.swift in Sources */,

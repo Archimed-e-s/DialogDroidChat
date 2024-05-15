@@ -20,6 +20,7 @@ struct _R {
   var color: color { .init(bundle: bundle) }
   var image: image { .init(bundle: bundle) }
   var info: info { .init(bundle: bundle) }
+  var file: file { .init(bundle: bundle) }
   var nib: nib { .init(bundle: bundle) }
   var storyboard: storyboard { .init(bundle: bundle) }
 
@@ -39,6 +40,9 @@ struct _R {
     .init(bundle: bundle)
   }
   func info(bundle: Foundation.Bundle) -> info {
+    .init(bundle: bundle)
+  }
+  func file(bundle: Foundation.Bundle) -> file {
     .init(bundle: bundle)
   }
   func nib(bundle: Foundation.Bundle) -> nib {
@@ -242,6 +246,32 @@ struct _R {
         }
       }
     }
+  }
+
+  /// This `_R.file` struct is generated, and contains static references to 7 resource files.
+  struct file {
+    let bundle: Foundation.Bundle
+
+    /// Resource file `LONEVATE feat. 18th - запах сирени.mp3`.
+    var lonevateFeat18thЗапахСирениMp3: RswiftResources.FileResource { .init(name: "LONEVATE feat. 18th - запах сирени", pathExtension: "mp3", bundle: bundle, locale: LocaleReference.none) }
+
+    /// Resource file `Magic - Rude.mp3`.
+    var magicRudeMp3: RswiftResources.FileResource { .init(name: "Magic - Rude", pathExtension: "mp3", bundle: bundle, locale: LocaleReference.none) }
+
+    /// Resource file `PINK EYES! - Сон.mp3`.
+    var pinkeyesСонMp3: RswiftResources.FileResource { .init(name: "PINK EYES! - Сон", pathExtension: "mp3", bundle: bundle, locale: LocaleReference.none) }
+
+    /// Resource file `saypink kolenki.mp3`.
+    var saypinkKolenkiMp3: RswiftResources.FileResource { .init(name: "saypink kolenki", pathExtension: "mp3", bundle: bundle, locale: LocaleReference.none) }
+
+    /// Resource file `saypink! - БРОСАЙ.mp3`.
+    var saypinkБРОСАЙMp3: RswiftResources.FileResource { .init(name: "saypink! - БРОСАЙ", pathExtension: "mp3", bundle: bundle, locale: LocaleReference.none) }
+
+    /// Resource file `КОСМОНАВТОВ НЕТ - вход прости Юра мы всё потеряли.mp3`.
+    var кОСМОНАВТОВНЕТВходПростиЮраМыВсёПотерялиMp3: RswiftResources.FileResource { .init(name: "КОСМОНАВТОВ НЕТ - вход прости Юра мы всё потеряли", pathExtension: "mp3", bundle: bundle, locale: LocaleReference.none) }
+
+    /// Resource file `Пошлая Молли - 2013.mp3`.
+    var пошлаяМолли2013Mp3: RswiftResources.FileResource { .init(name: "Пошлая Молли - 2013", pathExtension: "mp3", bundle: bundle, locale: LocaleReference.none) }
   }
 
   /// This `_R.segue` struct is generated, and contains static references to 2 view controllers.
