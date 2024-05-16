@@ -6,9 +6,9 @@ protocol MusicPlayer {
 }
 
 final class DefaultMusicPlayer: MusicPlayer {
-    
+
     private var audioPLayer: AVAudioPlayer?
-    
+
     func playAudio(fromURL url: URL) {
         do {
             audioPLayer?.stop()
@@ -20,7 +20,7 @@ final class DefaultMusicPlayer: MusicPlayer {
             print(error)
         }
     }
-    
+
     func stop() {
         audioPLayer?.stop()
         audioPLayer = nil

@@ -22,6 +22,8 @@
 		0455378E2BF437CD00CB8863 /* LONEVATE feat. 18th - запах сирени.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 045537872BF437CD00CB8863 /* LONEVATE feat. 18th - запах сирени.mp3 */; };
 		045537912BF43CD200CB8863 /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045537902BF43CD200CB8863 /* MusicPlayer.swift */; };
 		045537932BF43DF200CB8863 /* MusicPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045537922BF43DF200CB8863 /* MusicPlayerManager.swift */; };
+		045537962BF5C9C800CB8863 /* ChatScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045537952BF5C9C800CB8863 /* ChatScreenViewController.swift */; };
+		045537992BF5CEA500CB8863 /* ChatScreenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045537982BF5CEA500CB8863 /* ChatScreenTableViewCell.swift */; };
 		045AC7D22BE8708B0089E49A /* CornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AC7D12BE8708B0089E49A /* CornerView.swift */; };
 		045AC7D52BE873D70089E49A /* SettingsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AC7D42BE873D70089E49A /* SettingsScreenViewController.swift */; };
 		045AC7DB2BE8755D0089E49A /* SettingsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045AC7DA2BE8755D0089E49A /* SettingsCollectionViewCell.xib */; };
@@ -63,6 +65,8 @@
 		045537872BF437CD00CB8863 /* LONEVATE feat. 18th - запах сирени.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "LONEVATE feat. 18th - запах сирени.mp3"; sourceTree = "<group>"; };
 		045537902BF43CD200CB8863 /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
 		045537922BF43DF200CB8863 /* MusicPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerManager.swift; sourceTree = "<group>"; };
+		045537952BF5C9C800CB8863 /* ChatScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreenViewController.swift; sourceTree = "<group>"; };
+		045537982BF5CEA500CB8863 /* ChatScreenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreenTableViewCell.swift; sourceTree = "<group>"; };
 		045AC7D12BE8708B0089E49A /* CornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerView.swift; sourceTree = "<group>"; };
 		045AC7D42BE873D70089E49A /* SettingsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenViewController.swift; sourceTree = "<group>"; };
 		045AC7D92BE8755D0089E49A /* SettingsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -128,6 +132,8 @@
 		044837F12BEB06E700069C53 /* ChatScreen */ = {
 			isa = PBXGroup;
 			children = (
+				045537972BF5CE8500CB8863 /* View */,
+				045537942BF5C9A600CB8863 /* Controller */,
 				044837F22BEB06EF00069C53 /* Model */,
 			);
 			path = ChatScreen;
@@ -162,6 +168,22 @@
 				045537922BF43DF200CB8863 /* MusicPlayerManager.swift */,
 			);
 			path = MusicServices;
+			sourceTree = "<group>";
+		};
+		045537942BF5C9A600CB8863 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				045537952BF5C9C800CB8863 /* ChatScreenViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		045537972BF5CE8500CB8863 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				045537982BF5CEA500CB8863 /* ChatScreenTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		045AC7CF2BE870600089E49A /* CustomElements */ = {
@@ -616,11 +638,13 @@
 				045AC7F92BE9B6940089E49A /* Bundle+Extensions.swift in Sources */,
 				045AC7ED2BE9A8730089E49A /* MusicScreenModel.swift in Sources */,
 				04DF28D92BE49C1C008247B1 /* SceneDelegate.swift in Sources */,
+				045537962BF5C9C800CB8863 /* ChatScreenViewController.swift in Sources */,
 				045AC7F62BE9B4FC0089E49A /* ApplicationStorage.swift in Sources */,
 				045AC7EB2BE994D20089E49A /* MusicSettingsCollectionViewCell.swift in Sources */,
 				045AC7DC2BE8755D0089E49A /* SettingsCollectionViewCell.swift in Sources */,
 				044837E72BEB004200069C53 /* DataModel.xcdatamodeld in Sources */,
 				04DF28F22BE4A05D008247B1 /* R.generated.swift in Sources */,
+				045537992BF5CEA500CB8863 /* ChatScreenTableViewCell.swift in Sources */,
 				045AC7FB2BE9B91C0089E49A /* SettingsProvider.swift in Sources */,
 				044837F42BEB072000069C53 /* MessageModel.swift in Sources */,
 				045AC7E72BE98F7B0089E49A /* MusicScreenViewController.swift in Sources */,

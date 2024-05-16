@@ -11,17 +11,6 @@ class MainScreenViewController: UIViewController {
         super.viewDidLoad()
         checkIfLaunchBefore()
         setupLabels()
-        func test() {
-            do {
-                let  result = try serviceProvider.coreDataManager.getAllChatMessages()
-                print("getAllChatmessages = ", result)
-                let savaModel = MessageModel(identifier: UUID(), isFromUser: true, message: "test", timestamp: Date())
-                let saveResult = try serviceProvider.coreDataManager.saveChatMessage(savaModel)
-                print("saveChatMessage = ", saveResult)
-            } catch {
-                print(error)
-            }
-        }
         test()
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -43,7 +32,8 @@ class MainScreenViewController: UIViewController {
         print(#function)
     }
     @IBAction private func plainChatButtonDidTap(_ sender: Any) {
-        print(#function)
+//        print(#function)
+        performSegue(withIdentifier: "goToPlainChat", sender: nil)
     }
     // MARK: - Public Methods
     // MARK: - Private Methods
@@ -57,6 +47,44 @@ class MainScreenViewController: UIViewController {
         if !serviceProvider.applicationStorage.isLaunchingBefore {
             serviceProvider.applicationStorage.isLaunchingBefore = true
         }
+    }
+
+    // MARK: - TEST
+
+    func test() {
+        let text1 = """
+ kjjjhvfjhakbsflkjasgfiu as gf klashfkjda fhkuq whlf;kqwhoifrhwlirfhqwoirh qwlihrfioqwhro piqwhrpoiqhwr ioqhworihqw iorhqwoi rqowi rhowoiqrh owqhrioh qwiorh ioqwhrioqwh rlqhwrlkqhwlprkhq wiorh qwqiowhroqwirhqwoirh oiwerh e7t ie5tw5pty5 euqt o5eutw859htoi eltlwekt lwketlwetwe t8w e8t uweoptw e8twyo8tyewtwtyweto8wetyow8etyeow 8tyw eop8tyweoyt8pow ei th woeithop8 wetyowehtw 8ehto8pweht o8wetuwe8tuw e8tyw8etypwoetyowet 8eyo wet weyt8o wyeto8wyeto8wyeo8tyw eopt8we tpoeyt 8eytow8e yotw8yoptweytw eihtaoihseroithgspoerhgte rhoguhsoiughsgroiugherugh
+ """
+        let text2 = "Hello world"
+        let db = serviceProvider.coreDataManager
+        try? db.saveChatMessage(
+            MessageModel(
+                isFromUser: true,
+                message: text1,
+                timestamp: Date()
+            )
+        )
+        try? db.saveChatMessage(
+            MessageModel(
+                isFromUser: true,
+                message: text2,
+                timestamp: Date()
+            )
+        )
+        try? db.saveChatMessage(
+            MessageModel(
+                isFromUser: false,
+                message: text1,
+                timestamp: Date()
+            )
+        )
+        try? db.saveChatMessage(
+            MessageModel(
+                isFromUser: false,
+                message: text2,
+                timestamp: Date()
+            )
+        )
     }
 }
 

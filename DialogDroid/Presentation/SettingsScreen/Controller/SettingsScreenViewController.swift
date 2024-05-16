@@ -1,10 +1,13 @@
 import UIKit
 
 final class SettingsScreenViewController: UIViewController {
+
     // MARK: - Private properties
+
     @IBOutlet private weak var collectionView: UICollectionView!
     private let screenModel = SetttingsScreenCollectionModel.allCases
     private let serviceProvider: ServicesProvider = DefaultServicesProvider.shared
+
     // MARK: - Life Cycle
 
     override func viewDidLoad() {
@@ -19,7 +22,9 @@ final class SettingsScreenViewController: UIViewController {
     @IBAction private func backButtonDidTap(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
+
     // MARK: - Private Methods
+
     private func configureNavigationBar() {
         navigationItem.title = R.string.localizable.settingsScreenTitle()
     }
@@ -88,7 +93,7 @@ extension SettingsScreenViewController: UICollectionViewDelegate {
             performSegue(withIdentifier: "goToMusicSettings", sender: nil)
         case .deleteChatHistory:
             presentDeleteAllMessages { [weak self] in
-                do{
+                do {
                     try self?.serviceProvider.coreDataManager.deleteAllMessages()
                     let result = try self? .serviceProvider.coreDataManager.getAllChatMessages()
                     print(result)

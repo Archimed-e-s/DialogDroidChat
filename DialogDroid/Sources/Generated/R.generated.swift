@@ -279,8 +279,11 @@ struct _R {
     let mainScreenViewController = mainScreenViewController()
     let settingsScreenViewController = settingsScreenViewController()
 
-    /// This struct is generated for `MainScreenViewController`, and contains static references to 1 segues.
+    /// This struct is generated for `MainScreenViewController`, and contains static references to 2 segues.
     struct mainScreenViewController {
+
+      /// Segue identifier `goToPlainChat`.
+      var goToPlainChat: RswiftResources.SegueIdentifier<UIKit.UIStoryboardSegue, MainScreenViewController, ChatScreenViewController> { .init(identifier: "goToPlainChat") }
 
       /// Segue identifier `goToSettings`.
       var goToSettings: RswiftResources.SegueIdentifier<UIKit.UIStoryboardSegue, MainScreenViewController, SettingsScreenViewController> { .init(identifier: "goToSettings") }
@@ -354,10 +357,14 @@ struct _R {
       let bundle: Foundation.Bundle
 
       let name = "Main"
+
+      var goToPlainChat: RswiftResources.StoryboardViewControllerIdentifier<ChatScreenViewController> { .init(identifier: "goToPlainChat", storyboard: name, bundle: bundle) }
+
       func validate() throws {
         if #available(iOS 13.0, *) { if UIKit.UIImage(systemName: "arrow.left.circle") == nil { throw RswiftResources.ValidationError("[R.swift] System image named 'arrow.left.circle' is used in storyboard 'Main', but couldn't be loaded.") } }
         if #available(iOS 13.0, *) { if UIKit.UIImage(systemName: "gearshape") == nil { throw RswiftResources.ValidationError("[R.swift] System image named 'gearshape' is used in storyboard 'Main', but couldn't be loaded.") } }
         if #available(iOS 13.0, *) { if UIKit.UIImage(systemName: "link.circle") == nil { throw RswiftResources.ValidationError("[R.swift] System image named 'link.circle' is used in storyboard 'Main', but couldn't be loaded.") } }
+        if goToPlainChat() == nil { throw RswiftResources.ValidationError("[R.swift] ViewController with identifier 'goToPlainChat' could not be loaded from storyboard 'Main' as 'ChatScreenViewController'.") }
       }
     }
   }

@@ -24,7 +24,7 @@ force_try:
 
 line_length:
     warning: 120
-    error: 240
+    error: 600
     ignores_urls: true
     ignores_comments: true
     ignores_interpolated_strings: true
@@ -48,6 +48,7 @@ identifier_name:
   min_length: # only min_length
     error: 4 # only error
   excluded: # excluded via string array
+    - db
     - id
     - URL
     - url

@@ -37,14 +37,14 @@ final class CoreDataService {
         context.delete(object)
         return try saveChanges()
     }
-    
+
     func deleteAllObjects<T: NSManagedObject>(ofType entity: T.Type) throws {
         let request = entity.fetchRequest()
         let deleteRequest = NSBatchDeleteRequest(fetchRequest: request)
         deleteRequest.resultType = .resultTypeObjectIDs
         try persistenteStorageContainer.persistentStoreCoordinator.execute(deleteRequest, with: context)
     }
-    
+
     func fetchObjects<T: NSManagedObject>(
         ofType entity: T.Type,
         sortBy sortDescriptors: [NSSortDescriptor]? = nil

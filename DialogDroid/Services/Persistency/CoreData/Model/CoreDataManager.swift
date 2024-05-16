@@ -6,13 +6,19 @@ protocol CoreDataManager {
 }
 
 final class DefaultCoreDataManager: CoreDataManager {
+
     // MARK: - Private properties
+
     private let database: CoreDataService
+
     // MARK: - Initialization
+
     init(database: CoreDataService) {
         self.database = database
     }
+
     // MARK: - Public Methods
+
     func getAllChatMessages() throws -> [MessageModel] {
         let keys = #keyPath(CoreDataChatMessage.timestamp)
         let sortByDate = NSSortDescriptor(key: keys, ascending: false)

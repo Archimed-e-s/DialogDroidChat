@@ -137,11 +137,59 @@
                         <outlet property="animatedViewContainer" destination="Xas-zQ-kKX" id="AAj-uH-4BH"/>
                         <outlet property="centerLabel" destination="ihz-xW-MUt" id="QCF-fq-PqQ"/>
                         <segue destination="Vb8-3t-Mdq" kind="show" identifier="goToSettings" id="Ggi-8W-VeA"/>
+                        <segue destination="glG-9j-90T" kind="show" identifier="goToPlainChat" id="4YX-b8-pcm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1052.6717557251909" y="-27.464788732394368"/>
+        </scene>
+        <!--ChatScreen-->
+        <scene sceneID="XWp-Va-w4C">
+            <objects>
+                <viewController storyboardIdentifier="goToPlainChat" id="glG-9j-90T" customClass="ChatScreenViewController" customModule="DialogDroid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="591-X2-6xZ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KAo-aX-h4A">
+                                <rect key="frame" x="0.0" y="717" width="393" height="135"/>
+                                <color key="backgroundColor" systemColor="systemMintColor"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="onDrag" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="u8a-JO-XPP">
+                                <rect key="frame" x="8" y="111" width="377" height="598"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dkx-fs-AXt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KAo-aX-h4A" firstAttribute="top" secondItem="dkx-fs-AXt" secondAttribute="top" constant="614" id="2et-Gn-xfv"/>
+                            <constraint firstItem="KAo-aX-h4A" firstAttribute="top" secondItem="u8a-JO-XPP" secondAttribute="bottom" constant="8" id="9yF-Qf-z9K"/>
+                            <constraint firstItem="KAo-aX-h4A" firstAttribute="leading" secondItem="dkx-fs-AXt" secondAttribute="leading" id="AQd-0R-g1Q"/>
+                            <constraint firstItem="KAo-aX-h4A" firstAttribute="trailing" secondItem="dkx-fs-AXt" secondAttribute="trailing" id="GrE-Bk-PGn"/>
+                            <constraint firstItem="u8a-JO-XPP" firstAttribute="top" secondItem="dkx-fs-AXt" secondAttribute="top" constant="8" id="HUd-3b-XgT"/>
+                            <constraint firstItem="u8a-JO-XPP" firstAttribute="leading" secondItem="dkx-fs-AXt" secondAttribute="leading" constant="8" id="f5P-X9-Dhn"/>
+                            <constraint firstAttribute="bottom" secondItem="KAo-aX-h4A" secondAttribute="bottom" id="os7-67-eL5"/>
+                            <constraint firstItem="dkx-fs-AXt" firstAttribute="trailing" secondItem="u8a-JO-XPP" secondAttribute="trailing" constant="8" id="wfI-6f-7HJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ChatScreen" id="4Qf-6x-gsv">
+                        <barButtonItem key="leftBarButtonItem" image="arrow.left.circle" catalog="system" id="hOD-1x-ZlF">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="backButtonDidTap:" destination="glG-9j-90T" id="msN-Hm-W1d"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="inputContainerView" destination="KAo-aX-h4A" id="C9V-d9-pex"/>
+                        <outlet property="tableView" destination="u8a-JO-XPP" id="6Zu-vs-gO2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BjT-ng-hSg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1872.5190839694656" y="378.87323943661971"/>
         </scene>
         <!--Title2-->
         <scene sceneID="CyC-ly-oox">
@@ -279,6 +327,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.78039215689999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

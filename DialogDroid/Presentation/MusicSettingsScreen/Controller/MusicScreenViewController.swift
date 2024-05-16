@@ -1,14 +1,18 @@
 import UIKit
 
 final class MusicScreenViewController: UIViewController {
+    
     // MARK: - Private proprties
+
     @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet private weak var enableMusicSwitch: UISwitch!
     @IBOutlet private weak var enableMusicLabel: UILabel!
     private var selectedIndex: IndexPath?
     private let musicModel: [MusicCollection] = MusicCollection.allCases
     private let servicesProvider: ServicesProvider = DefaultServicesProvider.shared
+
     // MARK: - Life Cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
@@ -29,7 +33,9 @@ final class MusicScreenViewController: UIViewController {
             scrollPosition: .centeredVertically
         )
     }
+
     // MARK: - Actions
+
     @IBAction private func switchValueDidChange(_ sender: UISwitch) {
 
         servicesProvider.musicPlayerManager.changePlaying(isMusicOn: sender.isOn)
@@ -37,7 +43,9 @@ final class MusicScreenViewController: UIViewController {
     @IBAction private func backButtonDidTap(_ sender: UIBarButtonItem) {
         navigationController?.popViewController(animated: true)
     }
+
     // MARK: - Private Methods
+
     private func setupLabels() {
         enableMusicLabel.text = R.string.localizable.musicSettingsScreenSwitchLabel()
     }
@@ -63,7 +71,9 @@ final class MusicScreenViewController: UIViewController {
         )
     }
 }
+
     // MARK: - UICollectionViewDataSource
+
 extension MusicScreenViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return musicModel.count
@@ -82,7 +92,9 @@ extension MusicScreenViewController: UICollectionViewDataSource {
         return cell
     }
 }
+
     // MARK: - UICollectionViewDelegate
+
 extension MusicScreenViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if selectedIndex != nil {
@@ -94,7 +106,9 @@ extension MusicScreenViewController: UICollectionViewDelegate {
         servicesProvider.musicPlayerManager.changeMusic(to: musicModel[indexPath.item])
     }
 }
+
     // MARK: - UICollectionViewDelegateFlowLayout
+
 extension MusicScreenViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(
         _ collectionView: UICollectionView,
