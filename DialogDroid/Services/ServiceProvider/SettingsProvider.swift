@@ -7,12 +7,12 @@ protocol ServicesProvider {
     var settingStorage: ApplicationSettings { get }
     /// Менеджер работы с БД
     var coreDataManager: CoreDataManager { get }
-    
+
     var musicPlayerManager: MusicPlayerManager { get }
 }
 
 final class DefaultServicesProvider: ServicesProvider {
-   
+
     var applicationStorage: ApplicationStorage
     var settingStorage: ApplicationSettings
     var coreDataManager: CoreDataManager

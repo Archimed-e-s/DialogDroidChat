@@ -46,6 +46,13 @@
 		04DF28E02BE49C1E008247B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04DF28DF2BE49C1E008247B1 /* Assets.xcassets */; };
 		04DF28E32BE49C1E008247B1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 04DF28E22BE49C1E008247B1 /* Base */; };
 		04DF28F22BE4A05D008247B1 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF28F12BE4A05D008247B1 /* R.generated.swift */; };
+		04F2C8CA2BFC51E7006D4872 /* ChatScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F2C8C92BFC51E7006D4872 /* ChatScreenView.swift */; };
+		04F2C8CC2BFC75FD006D4872 /* Notification + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F2C8CB2BFC75FD006D4872 /* Notification + Extensions.swift */; };
+		04F2C8CE2BFC769D006D4872 /* UIView.AnimationOptions + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F2C8CD2BFC769D006D4872 /* UIView.AnimationOptions + Extensions.swift */; };
+		04F2C8D12C0005DC006D4872 /* RoleScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F2C8D02C0005DC006D4872 /* RoleScreenViewController.swift */; };
+		04F2C8D52C000846006D4872 /* RoleScreenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F2C8D32C000846006D4872 /* RoleScreenTableViewCell.swift */; };
+		04F2C8D62C000846006D4872 /* RoleScreenTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F2C8D42C000846006D4872 /* RoleScreenTableViewCell.xib */; };
+		04F2C8DA2C0012F4006D4872 /* ChatRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F2C8D92C0012F4006D4872 /* ChatRole.swift */; };
 		3FA30B438E57039140F5BD00 /* Pods_DialogDroid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 902B7B0F26F225B99FDA2B90 /* Pods_DialogDroid.framework */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +99,13 @@
 		04DF28E22BE49C1E008247B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04DF28E42BE49C1E008247B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04DF28F12BE4A05D008247B1 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		04F2C8C92BFC51E7006D4872 /* ChatScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreenView.swift; sourceTree = "<group>"; };
+		04F2C8CB2BFC75FD006D4872 /* Notification + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification + Extensions.swift"; sourceTree = "<group>"; };
+		04F2C8CD2BFC769D006D4872 /* UIView.AnimationOptions + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView.AnimationOptions + Extensions.swift"; sourceTree = "<group>"; };
+		04F2C8D02C0005DC006D4872 /* RoleScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleScreenViewController.swift; sourceTree = "<group>"; };
+		04F2C8D32C000846006D4872 /* RoleScreenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleScreenTableViewCell.swift; sourceTree = "<group>"; };
+		04F2C8D42C000846006D4872 /* RoleScreenTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoleScreenTableViewCell.xib; sourceTree = "<group>"; };
+		04F2C8D92C0012F4006D4872 /* ChatRole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRole.swift; sourceTree = "<group>"; };
 		571C1B55AEB516085AFAB066 /* Pods-DialogDroid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DialogDroid.debug.xcconfig"; path = "Target Support Files/Pods-DialogDroid/Pods-DialogDroid.debug.xcconfig"; sourceTree = "<group>"; };
 		902B7B0F26F225B99FDA2B90 /* Pods_DialogDroid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DialogDroid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6F826579998BC2C2BA5C8FC /* Pods-DialogDroid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DialogDroid.release.xcconfig"; path = "Target Support Files/Pods-DialogDroid/Pods-DialogDroid.release.xcconfig"; sourceTree = "<group>"; };
@@ -182,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				045537982BF5CEA500CB8863 /* ChatScreenTableViewCell.swift */,
+				04F2C8C92BFC51E7006D4872 /* ChatScreenView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -313,6 +328,8 @@
 			isa = PBXGroup;
 			children = (
 				045AC7F82BE9B6940089E49A /* Bundle+Extensions.swift */,
+				04F2C8CB2BFC75FD006D4872 /* Notification + Extensions.swift */,
+				04F2C8CD2BFC769D006D4872 /* UIView.AnimationOptions + Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -403,6 +420,7 @@
 		04DF28F32BE4A074008247B1 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				04F2C8CF2C0005B9006D4872 /* RoleScreen */,
 				044837F12BEB06E700069C53 /* ChatScreen */,
 				045AC7E22BE98F370089E49A /* MusicSettingsScreen */,
 				045AC7D32BE873BA0089E49A /* SettingsScreen */,
@@ -436,6 +454,41 @@
 				04DF28DA2BE49C1C008247B1 /* MainScreenViewController.swift */,
 			);
 			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		04F2C8CF2C0005B9006D4872 /* RoleScreen */ = {
+			isa = PBXGroup;
+			children = (
+				04F2C8D82C00124C006D4872 /* Model */,
+				04F2C8D72C00123A006D4872 /* Controller */,
+				04F2C8D22C00080A006D4872 /* View */,
+			);
+			path = RoleScreen;
+			sourceTree = "<group>";
+		};
+		04F2C8D22C00080A006D4872 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04F2C8D32C000846006D4872 /* RoleScreenTableViewCell.swift */,
+				04F2C8D42C000846006D4872 /* RoleScreenTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04F2C8D72C00123A006D4872 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04F2C8D02C0005DC006D4872 /* RoleScreenViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04F2C8D82C00124C006D4872 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04F2C8D92C0012F4006D4872 /* ChatRole.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		6ACABA769FDE79FD14CF6084 /* Pods */ = {
@@ -519,6 +572,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04DF28E02BE49C1E008247B1 /* Assets.xcassets in Resources */,
+				04F2C8D62C000846006D4872 /* RoleScreenTableViewCell.xib in Resources */,
 				045AC7FF2BE9C1610089E49A /* Localizable.strings in Resources */,
 				04DF28E32BE49C1E008247B1 /* Base in Resources */,
 				04DF28DE2BE49C1C008247B1 /* Base in Resources */,
@@ -631,6 +685,7 @@
 				045AC7F22BE9B4760089E49A /* UserDefaultStorage.swift in Sources */,
 				045537912BF43CD200CB8863 /* MusicPlayer.swift in Sources */,
 				045AC7D22BE8708B0089E49A /* CornerView.swift in Sources */,
+				04F2C8CE2BFC769D006D4872 /* UIView.AnimationOptions + Extensions.swift in Sources */,
 				045AC7E12BE898760089E49A /* SetttingsScreenCollectionModel.swift in Sources */,
 				04DF28DB2BE49C1C008247B1 /* MainScreenViewController.swift in Sources */,
 				044837E42BEAFCD800069C53 /* CoreDataManager.swift in Sources */,
@@ -639,7 +694,9 @@
 				045AC7ED2BE9A8730089E49A /* MusicScreenModel.swift in Sources */,
 				04DF28D92BE49C1C008247B1 /* SceneDelegate.swift in Sources */,
 				045537962BF5C9C800CB8863 /* ChatScreenViewController.swift in Sources */,
+				04F2C8CC2BFC75FD006D4872 /* Notification + Extensions.swift in Sources */,
 				045AC7F62BE9B4FC0089E49A /* ApplicationStorage.swift in Sources */,
+				04F2C8D52C000846006D4872 /* RoleScreenTableViewCell.swift in Sources */,
 				045AC7EB2BE994D20089E49A /* MusicSettingsCollectionViewCell.swift in Sources */,
 				045AC7DC2BE8755D0089E49A /* SettingsCollectionViewCell.swift in Sources */,
 				044837E72BEB004200069C53 /* DataModel.xcdatamodeld in Sources */,
@@ -647,7 +704,10 @@
 				045537992BF5CEA500CB8863 /* ChatScreenTableViewCell.swift in Sources */,
 				045AC7FB2BE9B91C0089E49A /* SettingsProvider.swift in Sources */,
 				044837F42BEB072000069C53 /* MessageModel.swift in Sources */,
+				04F2C8DA2C0012F4006D4872 /* ChatRole.swift in Sources */,
+				04F2C8CA2BFC51E7006D4872 /* ChatScreenView.swift in Sources */,
 				045AC7E72BE98F7B0089E49A /* MusicScreenViewController.swift in Sources */,
+				04F2C8D12C0005DC006D4872 /* RoleScreenViewController.swift in Sources */,
 				045AC7D52BE873D70089E49A /* SettingsScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

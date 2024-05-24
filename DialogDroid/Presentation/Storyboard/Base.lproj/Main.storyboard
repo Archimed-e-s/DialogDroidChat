@@ -3,7 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -151,28 +151,8 @@
                     <view key="view" contentMode="scaleToFill" id="591-X2-6xZ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KAo-aX-h4A">
-                                <rect key="frame" x="0.0" y="717" width="393" height="135"/>
-                                <color key="backgroundColor" systemColor="systemMintColor"/>
-                            </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="onDrag" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="u8a-JO-XPP">
-                                <rect key="frame" x="8" y="111" width="377" height="598"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="dkx-fs-AXt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="KAo-aX-h4A" firstAttribute="top" secondItem="dkx-fs-AXt" secondAttribute="top" constant="614" id="2et-Gn-xfv"/>
-                            <constraint firstItem="KAo-aX-h4A" firstAttribute="top" secondItem="u8a-JO-XPP" secondAttribute="bottom" constant="8" id="9yF-Qf-z9K"/>
-                            <constraint firstItem="KAo-aX-h4A" firstAttribute="leading" secondItem="dkx-fs-AXt" secondAttribute="leading" id="AQd-0R-g1Q"/>
-                            <constraint firstItem="KAo-aX-h4A" firstAttribute="trailing" secondItem="dkx-fs-AXt" secondAttribute="trailing" id="GrE-Bk-PGn"/>
-                            <constraint firstItem="u8a-JO-XPP" firstAttribute="top" secondItem="dkx-fs-AXt" secondAttribute="top" constant="8" id="HUd-3b-XgT"/>
-                            <constraint firstItem="u8a-JO-XPP" firstAttribute="leading" secondItem="dkx-fs-AXt" secondAttribute="leading" constant="8" id="f5P-X9-Dhn"/>
-                            <constraint firstAttribute="bottom" secondItem="KAo-aX-h4A" secondAttribute="bottom" id="os7-67-eL5"/>
-                            <constraint firstItem="dkx-fs-AXt" firstAttribute="trailing" secondItem="u8a-JO-XPP" secondAttribute="trailing" constant="8" id="wfI-6f-7HJ"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="ChatScreen" id="4Qf-6x-gsv">
                         <barButtonItem key="leftBarButtonItem" image="arrow.left.circle" catalog="system" id="hOD-1x-ZlF">
@@ -183,13 +163,50 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="inputContainerView" destination="KAo-aX-h4A" id="C9V-d9-pex"/>
-                        <outlet property="tableView" destination="u8a-JO-XPP" id="6Zu-vs-gO2"/>
+                        <segue destination="ePc-in-Q8h" kind="show" identifier="goToChatRoleScreen" id="3Vz-ph-aHE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BjT-ng-hSg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1872.5190839694656" y="378.87323943661971"/>
+        </scene>
+        <!--RoleScreen-->
+        <scene sceneID="Ksc-z9-61C">
+            <objects>
+                <viewController id="ePc-in-Q8h" customClass="RoleScreenViewController" customModule="DialogDroid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ct2-aC-xTx">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lBM-nu-e8d">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1HL-6r-EAb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1HL-6r-EAb" firstAttribute="bottom" secondItem="lBM-nu-e8d" secondAttribute="bottom" id="Cga-KL-AZw"/>
+                            <constraint firstItem="lBM-nu-e8d" firstAttribute="leading" secondItem="1HL-6r-EAb" secondAttribute="leading" id="Lz7-fk-w6o"/>
+                            <constraint firstItem="1HL-6r-EAb" firstAttribute="trailing" secondItem="lBM-nu-e8d" secondAttribute="trailing" id="TeW-4K-ntM"/>
+                            <constraint firstItem="lBM-nu-e8d" firstAttribute="top" secondItem="1HL-6r-EAb" secondAttribute="top" id="YaF-ko-YZo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="RoleScreen" id="o5w-a9-YlZ">
+                        <barButtonItem key="leftBarButtonItem" image="arrow.left.circle" catalog="system" id="8MV-x5-oPf">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="backButtonDidTap:" destination="ePc-in-Q8h" id="qLP-ct-HuK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="lBM-nu-e8d" id="xhH-5o-PTy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UUY-Mc-8Ql" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2694" y="379"/>
         </scene>
         <!--Title2-->
         <scene sceneID="CyC-ly-oox">
@@ -327,9 +344,6 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemMintColor">
-            <color red="0.0" green="0.78039215689999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

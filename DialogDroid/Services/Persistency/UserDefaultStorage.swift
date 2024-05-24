@@ -33,9 +33,11 @@ extension UserDefaultStorage: ApplicationStorage {
 // MARK: - ApplicationStorage
 
 extension UserDefaultStorage: ApplicationSettings {
+
     private enum ApplicationSettingsKeys {
         static let isMusicOn = Bundle.mainBundleIdentifier + ".isMusicOn"
         static let selectedMusicIndex = Bundle.mainBundleIdentifier + ".selectedMusicIndex"
+        static let selectedRoleIndex = Bundle.mainBundleIdentifier + ".selectedRoleIndex"
     }
     var isMusicOn: Bool {
         get { userDefaults.bool(forKey: ApplicationSettingsKeys.isMusicOn) }
@@ -44,5 +46,9 @@ extension UserDefaultStorage: ApplicationSettings {
     var selectedMusicIndex: Int {
         get { userDefaults.integer(forKey: ApplicationSettingsKeys.selectedMusicIndex) }
         set { userDefaults.set(newValue, forKey: ApplicationSettingsKeys.selectedMusicIndex) }
+    }
+    var selectedRoleIndex: Int {
+        get { userDefaults.integer(forKey: ApplicationSettingsKeys.selectedRoleIndex) }
+        set { userDefaults.set(newValue, forKey: ApplicationSettingsKeys.selectedRoleIndex) }
     }
 }

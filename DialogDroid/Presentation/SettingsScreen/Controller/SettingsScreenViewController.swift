@@ -95,7 +95,7 @@ extension SettingsScreenViewController: UICollectionViewDelegate {
             presentDeleteAllMessages { [weak self] in
                 do {
                     try self?.serviceProvider.coreDataManager.deleteAllMessages()
-                    let result = try self? .serviceProvider.coreDataManager.getAllChatMessages()
+                    guard let result = try self? .serviceProvider.coreDataManager.getAllChatMessages() else { return }
                     print(result)
                 } catch {
                     print(error)

@@ -5,20 +5,19 @@ protocol MusicPlayerManager {
     func changeMusic(to musicItem: MusicCollection)
 }
 final class DefaultMusicPlayerManager: MusicPlayerManager {
-    
-    
+
     private let settingsStorage: ApplicationSettings
     private let musicPlayer: MusicPlayer
-    
+
     init(settingsStorage: ApplicationSettings, musicPlayer: MusicPlayer) {
         self.settingsStorage = settingsStorage
         self.musicPlayer = musicPlayer
         configureMusic()
     }
-    
+
     func changePlaying(isMusicOn: Bool) {
+        settingsStorage.isMusicOn = isMusicOn
         if isMusicOn {
-            settingsStorage.isMusicOn = true
             configureMusic()
         } else {
             musicPlayer.stop()
@@ -29,7 +28,7 @@ final class DefaultMusicPlayerManager: MusicPlayerManager {
         musicPlayer.stop()
         configureMusic()
     }
-    
+
     private func configureMusic() {
         guard settingsStorage.isMusicOn,
               let musicItem = MusicCollection(rawValue: settingsStorage.selectedMusicIndex),
@@ -37,5 +36,5 @@ final class DefaultMusicPlayerManager: MusicPlayerManager {
         else { return }
         musicPlayer.playAudio(fromURL: url)
     }
-    
+
 }

@@ -1,7 +1,7 @@
 import UIKit
 
 final class MusicScreenViewController: UIViewController {
-    
+
     // MARK: - Private proprties
 
     @IBOutlet private weak var collectionView: UICollectionView!
