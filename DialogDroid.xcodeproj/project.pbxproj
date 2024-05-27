@@ -46,6 +46,8 @@
 		04DF28E02BE49C1E008247B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04DF28DF2BE49C1E008247B1 /* Assets.xcassets */; };
 		04DF28E32BE49C1E008247B1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 04DF28E22BE49C1E008247B1 /* Base */; };
 		04DF28F22BE4A05D008247B1 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF28F12BE4A05D008247B1 /* R.generated.swift */; };
+		04E324D02C03FED700B12B21 /* AIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E324CF2C03FED700B12B21 /* AIManager.swift */; };
+		04E324D32C0407D500B12B21 /* NotLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04E324D12C0407D500B12B21 /* NotLocalizable.strings */; };
 		04F2C8CA2BFC51E7006D4872 /* ChatScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F2C8C92BFC51E7006D4872 /* ChatScreenView.swift */; };
 		04F2C8CC2BFC75FD006D4872 /* Notification + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F2C8CB2BFC75FD006D4872 /* Notification + Extensions.swift */; };
 		04F2C8CE2BFC769D006D4872 /* UIView.AnimationOptions + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F2C8CD2BFC769D006D4872 /* UIView.AnimationOptions + Extensions.swift */; };
@@ -53,6 +55,12 @@
 		04F2C8D52C000846006D4872 /* RoleScreenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F2C8D32C000846006D4872 /* RoleScreenTableViewCell.swift */; };
 		04F2C8D62C000846006D4872 /* RoleScreenTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F2C8D42C000846006D4872 /* RoleScreenTableViewCell.xib */; };
 		04F2C8DA2C0012F4006D4872 /* ChatRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F2C8D92C0012F4006D4872 /* ChatRole.swift */; };
+		04F2C8DE2C002272006D4872 /* AIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F2C8DD2C002272006D4872 /* AIClient.swift */; };
+		04F2C8E02C002471006D4872 /* AIClientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F2C8DF2C002471006D4872 /* AIClientModel.swift */; };
+		04F2C8E22C002552006D4872 /* AIClientModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F2C8E12C002552006D4872 /* AIClientModelType.swift */; };
+		04F2C8E42C0028B0006D4872 /* AIClientEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F2C8E32C0028B0006D4872 /* AIClientEndPoint.swift */; };
+		04F2C8E62C002959006D4872 /* AIClientCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F2C8E52C002959006D4872 /* AIClientCommand.swift */; };
+		04F2C8E82C002D42006D4872 /* ApplicationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F2C8E72C002D42006D4872 /* ApplicationConstants.swift */; };
 		3FA30B438E57039140F5BD00 /* Pods_DialogDroid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 902B7B0F26F225B99FDA2B90 /* Pods_DialogDroid.framework */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +107,8 @@
 		04DF28E22BE49C1E008247B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04DF28E42BE49C1E008247B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04DF28F12BE4A05D008247B1 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		04E324CF2C03FED700B12B21 /* AIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIManager.swift; sourceTree = "<group>"; };
+		04E324D22C0407D500B12B21 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/NotLocalizable.strings; sourceTree = "<group>"; };
 		04F2C8C92BFC51E7006D4872 /* ChatScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreenView.swift; sourceTree = "<group>"; };
 		04F2C8CB2BFC75FD006D4872 /* Notification + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification + Extensions.swift"; sourceTree = "<group>"; };
 		04F2C8CD2BFC769D006D4872 /* UIView.AnimationOptions + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView.AnimationOptions + Extensions.swift"; sourceTree = "<group>"; };
@@ -106,6 +116,12 @@
 		04F2C8D32C000846006D4872 /* RoleScreenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleScreenTableViewCell.swift; sourceTree = "<group>"; };
 		04F2C8D42C000846006D4872 /* RoleScreenTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoleScreenTableViewCell.xib; sourceTree = "<group>"; };
 		04F2C8D92C0012F4006D4872 /* ChatRole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRole.swift; sourceTree = "<group>"; };
+		04F2C8DD2C002272006D4872 /* AIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIClient.swift; sourceTree = "<group>"; };
+		04F2C8DF2C002471006D4872 /* AIClientModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIClientModel.swift; sourceTree = "<group>"; };
+		04F2C8E12C002552006D4872 /* AIClientModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIClientModelType.swift; sourceTree = "<group>"; };
+		04F2C8E32C0028B0006D4872 /* AIClientEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIClientEndPoint.swift; sourceTree = "<group>"; };
+		04F2C8E52C002959006D4872 /* AIClientCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIClientCommand.swift; sourceTree = "<group>"; };
+		04F2C8E72C002D42006D4872 /* ApplicationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationConstants.swift; sourceTree = "<group>"; };
 		571C1B55AEB516085AFAB066 /* Pods-DialogDroid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DialogDroid.debug.xcconfig"; path = "Target Support Files/Pods-DialogDroid/Pods-DialogDroid.debug.xcconfig"; sourceTree = "<group>"; };
 		902B7B0F26F225B99FDA2B90 /* Pods_DialogDroid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DialogDroid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6F826579998BC2C2BA5C8FC /* Pods-DialogDroid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DialogDroid.release.xcconfig"; path = "Target Support Files/Pods-DialogDroid/Pods-DialogDroid.release.xcconfig"; sourceTree = "<group>"; };
@@ -298,6 +314,7 @@
 		045AC7EE2BE9B4330089E49A /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				04F2C8DB2C00209A006D4872 /* Network */,
 				0455378F2BF43CB500CB8863 /* MusicServices */,
 				045AC7F02BE9B4540089E49A /* Persistency */,
 				045AC7EF2BE9B4400089E49A /* ServiceProvider */,
@@ -396,6 +413,7 @@
 				045537802BF4359300CB8863 /* Music */,
 				045AC7FC2BE9C1370089E49A /* Localizable */,
 				04DF28DF2BE49C1E008247B1 /* Assets.xcassets */,
+				04E324D12C0407D500B12B21 /* NotLocalizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -413,6 +431,7 @@
 			isa = PBXGroup;
 			children = (
 				04DF28E42BE49C1E008247B1 /* Info.plist */,
+				04F2C8E72C002D42006D4872 /* ApplicationConstants.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -489,6 +508,27 @@
 				04F2C8D92C0012F4006D4872 /* ChatRole.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		04F2C8DB2C00209A006D4872 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				04F2C8DC2C0020A6006D4872 /* AIClient */,
+				04E324CF2C03FED700B12B21 /* AIManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		04F2C8DC2C0020A6006D4872 /* AIClient */ = {
+			isa = PBXGroup;
+			children = (
+				04F2C8DD2C002272006D4872 /* AIClient.swift */,
+				04F2C8E32C0028B0006D4872 /* AIClientEndPoint.swift */,
+				04F2C8E52C002959006D4872 /* AIClientCommand.swift */,
+				04F2C8DF2C002471006D4872 /* AIClientModel.swift */,
+				04F2C8E12C002552006D4872 /* AIClientModelType.swift */,
+			);
+			path = AIClient;
 			sourceTree = "<group>";
 		};
 		6ACABA769FDE79FD14CF6084 /* Pods */ = {
@@ -584,6 +624,7 @@
 				045AC7EA2BE994D20089E49A /* MusicSettingsCollectionViewCell.xib in Resources */,
 				0455378D2BF437CD00CB8863 /* saypink kolenki.mp3 in Resources */,
 				045537892BF437CD00CB8863 /* saypink! - БРОСАЙ.mp3 in Resources */,
+				04E324D32C0407D500B12B21 /* NotLocalizable.strings in Resources */,
 				0455378C2BF437CD00CB8863 /* КОСМОНАВТОВ НЕТ - вход прости Юра мы всё потеряли.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -677,6 +718,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04F2C8E22C002552006D4872 /* AIClientModelType.swift in Sources */,
 				044837EE2BEB01BF00069C53 /* CoreDataChatMessage+CoreDataClass.swift in Sources */,
 				044837EF2BEB01BF00069C53 /* CoreDataChatMessage+CoreDataProperties.swift in Sources */,
 				044837E22BEAFCCC00069C53 /* CoreDataService.swift in Sources */,
@@ -696,7 +738,9 @@
 				045537962BF5C9C800CB8863 /* ChatScreenViewController.swift in Sources */,
 				04F2C8CC2BFC75FD006D4872 /* Notification + Extensions.swift in Sources */,
 				045AC7F62BE9B4FC0089E49A /* ApplicationStorage.swift in Sources */,
+				04F2C8E62C002959006D4872 /* AIClientCommand.swift in Sources */,
 				04F2C8D52C000846006D4872 /* RoleScreenTableViewCell.swift in Sources */,
+				04F2C8E02C002471006D4872 /* AIClientModel.swift in Sources */,
 				045AC7EB2BE994D20089E49A /* MusicSettingsCollectionViewCell.swift in Sources */,
 				045AC7DC2BE8755D0089E49A /* SettingsCollectionViewCell.swift in Sources */,
 				044837E72BEB004200069C53 /* DataModel.xcdatamodeld in Sources */,
@@ -707,8 +751,12 @@
 				04F2C8DA2C0012F4006D4872 /* ChatRole.swift in Sources */,
 				04F2C8CA2BFC51E7006D4872 /* ChatScreenView.swift in Sources */,
 				045AC7E72BE98F7B0089E49A /* MusicScreenViewController.swift in Sources */,
+				04E324D02C03FED700B12B21 /* AIManager.swift in Sources */,
+				04F2C8DE2C002272006D4872 /* AIClient.swift in Sources */,
 				04F2C8D12C0005DC006D4872 /* RoleScreenViewController.swift in Sources */,
 				045AC7D52BE873D70089E49A /* SettingsScreenViewController.swift in Sources */,
+				04F2C8E82C002D42006D4872 /* ApplicationConstants.swift in Sources */,
+				04F2C8E42C0028B0006D4872 /* AIClientEndPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -738,6 +786,14 @@
 				04DF28E22BE49C1E008247B1 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		04E324D12C0407D500B12B21 /* NotLocalizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04E324D22C0407D500B12B21 /* en */,
+			);
+			name = NotLocalizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

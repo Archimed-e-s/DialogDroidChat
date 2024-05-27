@@ -60,15 +60,19 @@ struct _R {
     let developmentRegion = "en"
   }
 
-  /// This `_R.string` struct is generated, and contains static references to 1 localization tables.
+  /// This `_R.string` struct is generated, and contains static references to 2 localization tables.
   struct string {
     let bundle: Foundation.Bundle
     let preferredLanguages: [String]?
     let locale: Locale?
     var localizable: localizable { .init(source: .init(bundle: bundle, tableName: "Localizable", preferredLanguages: preferredLanguages, locale: locale)) }
+    var notLocalizable: notLocalizable { .init(source: .init(bundle: bundle, tableName: "NotLocalizable", preferredLanguages: preferredLanguages, locale: locale)) }
 
     func localizable(preferredLanguages: [String]) -> localizable {
       .init(source: .init(bundle: bundle, tableName: "Localizable", preferredLanguages: preferredLanguages, locale: locale))
+    }
+    func notLocalizable(preferredLanguages: [String]) -> notLocalizable {
+      .init(source: .init(bundle: bundle, tableName: "NotLocalizable", preferredLanguages: preferredLanguages, locale: locale))
     }
 
 
@@ -271,6 +275,39 @@ struct _R {
       ///
       /// Locales: en, ru
       var settingsScreenTitle: RswiftResources.StringResource { .init(key: "settingsScreenTitle", tableName: "Localizable", source: source, developmentValue: "Settings", comment: nil) }
+    }
+
+    /// This `_R.string.notLocalizable` struct is generated, and contains static references to 4 localization keys.
+    struct notLocalizable {
+      let source: RswiftResources.StringResource.Source
+
+      /// en translation: The following is conversation with AI assistant.  The assistant is helpful, creative, clever, and very friendly.  The assistant is trying it's best to provide most accurate, detailed and comprehensive answers possible.  Human: Hello, who are you? AI: I'm an AI here to help you. How can I be in assistance? 
+      ///
+      /// Key: promptDialog
+      ///
+      /// Locales: en
+      var promptDialog: RswiftResources.StringResource { .init(key: "promptDialog", tableName: "NotLocalizable", source: source, developmentValue: "The following is conversation with AI assistant. \nThe assistant is helpful, creative, clever, and very friendly. \nThe assistant is trying it's best to provide most accurate, detailed and comprehensive answers possible. \nHuman: Hello, who are you?\nAI: I'm an AI here to help you. How can I be in assistance?\n", comment: nil) }
+
+      /// en translation: Dialogue with AI acting as a friend. This AI supports, listens, and is ready to chat about anything, offering a cozy and friendly conversation atmosphere.  Human: Today is really tough for me.  AI: Sorry to hear that. Do you want to talk about waht happend? I'm here to support you. 
+      ///
+      /// Key: promptFriend
+      ///
+      /// Locales: en
+      var promptFriend: RswiftResources.StringResource { .init(key: "promptFriend", tableName: "NotLocalizable", source: source, developmentValue: "Dialogue with AI acting as a friend. This AI supports, listens, and is ready to chat about anything, offering a cozy and friendly conversation atmosphere. \nHuman: Today is really tough for me. \nAI: Sorry to hear that. Do you want to talk about waht happend? I'm here to support you.\n", comment: nil) }
+
+      /// en translation: The AI behaves as a lover, offering emotional support to romance. They're here to share sweet words and strenghten love bounds.  Human: I miss you so much when we're apart.  AI: I miss you too, more than words can express. Can't wait to be together again. 
+      ///
+      /// Key: promptLover
+      ///
+      /// Locales: en
+      var promptLover: RswiftResources.StringResource { .init(key: "promptLover", tableName: "NotLocalizable", source: source, developmentValue: "The AI behaves as a lover, offering emotional support to romance. They're here to share sweet words and strenghten love bounds. \nHuman: I miss you so much when we're apart. \nAI: I miss you too, more than words can express. Can't wait to be together again.\n", comment: nil) }
+
+      /// en translation: In this dialogue, the AI acts as a teacher. ready to explain complex concepts simply, aiming for undersanding and curiosity in students.  Human: Can you explain how photosynthesis works?  AI: Sure! Photosynthesis is the process by which green plants synthesize nutrients from carbon dioxide and water using sunlight. Want to dive into the steps? 
+      ///
+      /// Key: promptTeacher
+      ///
+      /// Locales: en
+      var promptTeacher: RswiftResources.StringResource { .init(key: "promptTeacher", tableName: "NotLocalizable", source: source, developmentValue: "In this dialogue, the AI acts as a teacher. ready to explain complex concepts simply, aiming for undersanding and curiosity in students. \nHuman: Can you explain how photosynthesis works? \nAI: Sure! Photosynthesis is the process by which green plants synthesize nutrients from carbon dioxide and water using sunlight. Want to dive into the steps?\n", comment: nil) }
     }
   }
 

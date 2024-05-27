@@ -8,7 +8,6 @@ final class RoleScreenViewController: UIViewController {
 
     @IBOutlet private weak var tableView: UITableView!
     private var selectedIndex: IndexPath?
-
     private let model = ChatRole.allCases
     private let settingsStorage: ApplicationSettings = DefaultServicesProvider.shared.settingStorage
 
