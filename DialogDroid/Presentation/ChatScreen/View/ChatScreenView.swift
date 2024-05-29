@@ -196,7 +196,6 @@ final class ChatScreenView: UIView {
         sendButton.layer.shadowOffset = .zero
         messagetextField.layer.shadowOffset = .zero
         inputContainerView.layer.shadowOffset = CGSize(width: 0, height: -4)
-
     }
 
     func setupLayout() {

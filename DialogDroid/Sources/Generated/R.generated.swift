@@ -76,7 +76,7 @@ struct _R {
     }
 
 
-    /// This `_R.string.localizable` struct is generated, and contains static references to 28 localization keys.
+    /// This `_R.string.localizable` struct is generated, and contains static references to 29 localization keys.
     struct localizable {
       let source: RswiftResources.StringResource.Source
 
@@ -177,6 +177,13 @@ struct _R {
       ///
       /// Locales: en, ru
       var mainScreenCenterLabel: RswiftResources.StringResource { .init(key: "mainScreenCenterLabel", tableName: "Localizable", source: source, developmentValue: "Start communicationg with the AI", comment: nil) }
+
+      /// en translation: Go to chat
+      ///
+      /// Key: mainScreenGoToChatLabel
+      ///
+      /// Locales: en, ru
+      var mainScreenGoToChatLabel: RswiftResources.StringResource { .init(key: "mainScreenGoToChatLabel", tableName: "Localizable", source: source, developmentValue: "Go to chat", comment: nil) }
 
       /// en translation: Main Screen
       ///
@@ -515,7 +522,6 @@ struct _R {
 
       func validate() throws {
         if #available(iOS 13.0, *) { if UIKit.UIImage(systemName: "arrow.left.circle") == nil { throw RswiftResources.ValidationError("[R.swift] System image named 'arrow.left.circle' is used in storyboard 'Main', but couldn't be loaded.") } }
-        if #available(iOS 13.0, *) { if UIKit.UIImage(systemName: "ellipsis.message") == nil { throw RswiftResources.ValidationError("[R.swift] System image named 'ellipsis.message' is used in storyboard 'Main', but couldn't be loaded.") } }
         if #available(iOS 13.0, *) { if UIKit.UIImage(systemName: "gearshape") == nil { throw RswiftResources.ValidationError("[R.swift] System image named 'gearshape' is used in storyboard 'Main', but couldn't be loaded.") } }
         if #available(iOS 13.0, *) { if UIKit.UIImage(systemName: "square.and.arrow.up.circle") == nil { throw RswiftResources.ValidationError("[R.swift] System image named 'square.and.arrow.up.circle' is used in storyboard 'Main', but couldn't be loaded.") } }
         if UIKit.UIColor(named: "AccentColor", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Color named 'AccentColor' is used in storyboard 'Main', but couldn't be loaded.") }

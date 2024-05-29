@@ -8,6 +8,7 @@
 
 "mainScreenTitle" = "Main Screen";
 "mainScreenCenterLabel" = "Start communicationg with the AI";
+"mainScreenGoToChatLabel" = "Go to chat";
 
 "settingsScreenTitle" = "Settings";
 

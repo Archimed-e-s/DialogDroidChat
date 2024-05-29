@@ -8,6 +8,7 @@
 
 "mainScreenTitle" = "Главный экран";
 "mainScreenCenterLabel" = "Начни общение с ИИ";
+"mainScreenGoToChatLabel" = "Перейти в чат";
 
 "settingsScreenTitle" = "Настройки";
 

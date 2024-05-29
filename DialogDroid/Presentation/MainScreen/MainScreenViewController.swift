@@ -7,6 +7,8 @@ class MainScreenViewController: UIViewController {
 
     @IBOutlet private weak var animatedViewContainer: UIView!
     @IBOutlet private weak var centerLabel: UILabel!
+    @IBOutlet weak var goToChatView: CornerView!
+    @IBOutlet weak var goToChatLabel: UILabel!
     private let serviceProvider: ServicesProvider = DefaultServicesProvider.shared
     private var isNeedShowSplashScreen: Bool = true
 
@@ -25,6 +27,7 @@ class MainScreenViewController: UIViewController {
         checkIfLaunchBefore()
         setupLabels()
         setupLogoView()
+        setupGestures()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -46,30 +49,33 @@ class MainScreenViewController: UIViewController {
     // MARK: - Actions
 
     @IBAction private func settingsButtonDidTap(_ sender: Any) {
-        print(#function)
         performSegue(withIdentifier: "goToSettings", sender: nil)
     }
 
     @IBAction private func shareButtonDidTap(_ sender: Any) {
-//        print(#function)
         guard let url = URL(string: "https://apple.com") else { return }
         let activityVC = UIActivityViewController(activityItems: [url], applicationActivities: nil)
         present(activityVC, animated: true)
     }
 
-    @IBAction private func rolePlayChatButtonDidTap(_ sender: Any) {
-        print(#function)
-    }
-
-    @IBAction private func plainChatButtonDidTap(_ sender: Any) {
-//        print(#function)
-        performSegue(withIdentifier: "goToPlainChat", sender: nil)
+    @objc private func chatButtonDidTap() {
+        UIView.animate(withDuration: 0.1) { [self] in
+            goToChatLabel.transform = goToChatLabel.transform.scaledBy(x: 0.9, y: 0.9)
+        } completion: { _ in
+            self.goToChatLabel.transform = .identity
+            self.performSegue(withIdentifier: "goToPlainChat", sender: nil)
+        }
     }
 
     // MARK: - Private Methods
- 
+
+    private func setupGestures() {
+        goToChatView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(chatButtonDidTap)))
+    }
+
     private func setupLabels() {
         centerLabel.text = R.string.localizable.mainScreenCenterLabel()
+        goToChatLabel.text = R.string.localizable.mainScreenGoToChatLabel()
     }
 
     private func configureNavigationBar() {
@@ -96,7 +102,7 @@ class MainScreenViewController: UIViewController {
         splashScreenViewController.modalPresentationStyle = .fullScreen
         present(splashScreenViewController, animated: false)
     }
-    
+
     private func setupLogoView() {
         view.addSubview(animatedMainScreen)
         NSLayoutConstraint.activate([

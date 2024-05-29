@@ -87,7 +87,7 @@ final class ChatScreenTableViewCell: UITableViewCell {
 
         dateLabel.text = model.timestamp.formatted(date: .omitted, time: .omitted)
         layoutIfNeeded()
-        
+
         if model.isFromUser {
             animatedAvatarBot.play()
             animatedAvatarBot.alpha = 1
@@ -96,7 +96,9 @@ final class ChatScreenTableViewCell: UITableViewCell {
             animatedAvatarPerson.alpha = 1
         }
     }
+
     // MARK: - Private Methods
+
     private func setupUI() {
         backgroundColor = .clear
         avatarImageView.layer.cornerRadius = 20
@@ -112,7 +114,14 @@ final class ChatScreenTableViewCell: UITableViewCell {
         setupConstraints()
     }
     private func addSubViews() {
-        [backgroundCellView, avatarImageView, animatedAvatarBot, animatedAvatarPerson, dateLabel, messageLabel].forEach({
+        [
+            backgroundCellView,
+            avatarImageView,
+            animatedAvatarBot,
+            animatedAvatarPerson,
+            dateLabel,
+            messageLabel
+        ].forEach({
             $0.translatesAutoresizingMaskIntoConstraints = false
             contentView.addSubview($0)
         })
@@ -138,7 +147,7 @@ final class ChatScreenTableViewCell: UITableViewCell {
             animatedAvatarBot.trailingAnchor.constraint(equalTo: avatarImageView.trailingAnchor),
             animatedAvatarBot.topAnchor.constraint(equalTo: avatarImageView.topAnchor),
             animatedAvatarBot.bottomAnchor.constraint(equalTo: avatarImageView.bottomAnchor),
-            
+
             animatedAvatarPerson.leadingAnchor.constraint(equalTo: avatarImageView.leadingAnchor),
             animatedAvatarPerson.trailingAnchor.constraint(equalTo: avatarImageView.trailingAnchor),
             animatedAvatarPerson.topAnchor.constraint(equalTo: avatarImageView.topAnchor),
@@ -146,4 +155,3 @@ final class ChatScreenTableViewCell: UITableViewCell {
             ])
         }
     }
-
