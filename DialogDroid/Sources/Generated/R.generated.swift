@@ -376,7 +376,7 @@ struct _R {
     }
   }
 
-  /// This `_R.file` struct is generated, and contains static references to 7 resource files.
+  /// This `_R.file` struct is generated, and contains static references to 11 resource files.
   struct file {
     let bundle: Foundation.Bundle
 
@@ -388,6 +388,18 @@ struct _R {
 
     /// Resource file `PINK EYES! - Сон.mp3`.
     var pinkeyesСонMp3: RswiftResources.FileResource { .init(name: "PINK EYES! - Сон", pathExtension: "mp3", bundle: bundle, locale: LocaleReference.none) }
+
+    /// Resource file `avatarBot.json`.
+    var avatarBotJson: RswiftResources.FileResource { .init(name: "avatarBot", pathExtension: "json", bundle: bundle, locale: LocaleReference.none) }
+
+    /// Resource file `avatarPerson.json`.
+    var avatarPersonJson: RswiftResources.FileResource { .init(name: "avatarPerson", pathExtension: "json", bundle: bundle, locale: LocaleReference.none) }
+
+    /// Resource file `loadView.json`.
+    var loadViewJson: RswiftResources.FileResource { .init(name: "loadView", pathExtension: "json", bundle: bundle, locale: LocaleReference.none) }
+
+    /// Resource file `mainScreen.json`.
+    var mainScreenJson: RswiftResources.FileResource { .init(name: "mainScreen", pathExtension: "json", bundle: bundle, locale: LocaleReference.none) }
 
     /// Resource file `saypink kolenki.mp3`.
     var saypinkKolenkiMp3: RswiftResources.FileResource { .init(name: "saypink kolenki", pathExtension: "mp3", bundle: bundle, locale: LocaleReference.none) }
@@ -503,8 +515,10 @@ struct _R {
 
       func validate() throws {
         if #available(iOS 13.0, *) { if UIKit.UIImage(systemName: "arrow.left.circle") == nil { throw RswiftResources.ValidationError("[R.swift] System image named 'arrow.left.circle' is used in storyboard 'Main', but couldn't be loaded.") } }
+        if #available(iOS 13.0, *) { if UIKit.UIImage(systemName: "ellipsis.message") == nil { throw RswiftResources.ValidationError("[R.swift] System image named 'ellipsis.message' is used in storyboard 'Main', but couldn't be loaded.") } }
         if #available(iOS 13.0, *) { if UIKit.UIImage(systemName: "gearshape") == nil { throw RswiftResources.ValidationError("[R.swift] System image named 'gearshape' is used in storyboard 'Main', but couldn't be loaded.") } }
-        if #available(iOS 13.0, *) { if UIKit.UIImage(systemName: "link.circle") == nil { throw RswiftResources.ValidationError("[R.swift] System image named 'link.circle' is used in storyboard 'Main', but couldn't be loaded.") } }
+        if #available(iOS 13.0, *) { if UIKit.UIImage(systemName: "square.and.arrow.up.circle") == nil { throw RswiftResources.ValidationError("[R.swift] System image named 'square.and.arrow.up.circle' is used in storyboard 'Main', but couldn't be loaded.") } }
+        if UIKit.UIColor(named: "AccentColor", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Color named 'AccentColor' is used in storyboard 'Main', but couldn't be loaded.") }
         if goToPlainChat() == nil { throw RswiftResources.ValidationError("[R.swift] ViewController with identifier 'goToPlainChat' could not be loaded from storyboard 'Main' as 'ChatScreenViewController'.") }
         if splashVC() == nil { throw RswiftResources.ValidationError("[R.swift] ViewController with identifier 'splashVC' could not be loaded from storyboard 'Main' as 'LaunchScreenViewController'.") }
       }

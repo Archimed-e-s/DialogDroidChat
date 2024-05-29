@@ -49,6 +49,10 @@
 		04E324D02C03FED700B12B21 /* AIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E324CF2C03FED700B12B21 /* AIManager.swift */; };
 		04E324D32C0407D500B12B21 /* NotLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04E324D12C0407D500B12B21 /* NotLocalizable.strings */; };
 		04E324D52C06A8EE00B12B21 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E324D42C06A8EE00B12B21 /* LaunchScreenViewController.swift */; };
+		04E324DB2C06BE5F00B12B21 /* loadView.json in Resources */ = {isa = PBXBuildFile; fileRef = 04E324D82C06BE5F00B12B21 /* loadView.json */; };
+		04E324DC2C06BE5F00B12B21 /* avatarPerson.json in Resources */ = {isa = PBXBuildFile; fileRef = 04E324D92C06BE5F00B12B21 /* avatarPerson.json */; };
+		04E324DE2C06C3BC00B12B21 /* mainScreen.json in Resources */ = {isa = PBXBuildFile; fileRef = 04E324DD2C06C3BC00B12B21 /* mainScreen.json */; };
+		04E324E02C06D7FA00B12B21 /* avatarBot.json in Resources */ = {isa = PBXBuildFile; fileRef = 04E324DF2C06D7FA00B12B21 /* avatarBot.json */; };
 		04F2C8CA2BFC51E7006D4872 /* ChatScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F2C8C92BFC51E7006D4872 /* ChatScreenView.swift */; };
 		04F2C8CC2BFC75FD006D4872 /* Notification + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F2C8CB2BFC75FD006D4872 /* Notification + Extensions.swift */; };
 		04F2C8CE2BFC769D006D4872 /* UIView.AnimationOptions + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F2C8CD2BFC769D006D4872 /* UIView.AnimationOptions + Extensions.swift */; };
@@ -111,6 +115,10 @@
 		04E324CF2C03FED700B12B21 /* AIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIManager.swift; sourceTree = "<group>"; };
 		04E324D22C0407D500B12B21 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/NotLocalizable.strings; sourceTree = "<group>"; };
 		04E324D42C06A8EE00B12B21 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		04E324D82C06BE5F00B12B21 /* loadView.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loadView.json; sourceTree = "<group>"; };
+		04E324D92C06BE5F00B12B21 /* avatarPerson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = avatarPerson.json; sourceTree = "<group>"; };
+		04E324DD2C06C3BC00B12B21 /* mainScreen.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mainScreen.json; sourceTree = "<group>"; };
+		04E324DF2C06D7FA00B12B21 /* avatarBot.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = avatarBot.json; sourceTree = "<group>"; };
 		04F2C8C92BFC51E7006D4872 /* ChatScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreenView.swift; sourceTree = "<group>"; };
 		04F2C8CB2BFC75FD006D4872 /* Notification + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification + Extensions.swift"; sourceTree = "<group>"; };
 		04F2C8CD2BFC769D006D4872 /* UIView.AnimationOptions + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView.AnimationOptions + Extensions.swift"; sourceTree = "<group>"; };
@@ -412,6 +420,7 @@
 		04DF28EC2BE49D41008247B1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				04E324D62C06BE3B00B12B21 /* Animations */,
 				045537802BF4359300CB8863 /* Music */,
 				045AC7FC2BE9C1370089E49A /* Localizable */,
 				04DF28DF2BE49C1E008247B1 /* Assets.xcassets */,
@@ -476,6 +485,17 @@
 				04DF28DA2BE49C1C008247B1 /* MainScreenViewController.swift */,
 			);
 			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		04E324D62C06BE3B00B12B21 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				04E324DF2C06D7FA00B12B21 /* avatarBot.json */,
+				04E324D82C06BE5F00B12B21 /* loadView.json */,
+				04E324DD2C06C3BC00B12B21 /* mainScreen.json */,
+				04E324D92C06BE5F00B12B21 /* avatarPerson.json */,
+			);
+			path = Animations;
 			sourceTree = "<group>";
 		};
 		04F2C8CF2C0005B9006D4872 /* RoleScreen */ = {
@@ -616,16 +636,20 @@
 			files = (
 				04DF28E02BE49C1E008247B1 /* Assets.xcassets in Resources */,
 				04F2C8D62C000846006D4872 /* RoleScreenTableViewCell.xib in Resources */,
+				04E324DC2C06BE5F00B12B21 /* avatarPerson.json in Resources */,
 				045AC7FF2BE9C1610089E49A /* Localizable.strings in Resources */,
 				04DF28E32BE49C1E008247B1 /* Base in Resources */,
 				04DF28DE2BE49C1C008247B1 /* Base in Resources */,
+				04E324E02C06D7FA00B12B21 /* avatarBot.json in Resources */,
 				045537882BF437CD00CB8863 /* Magic - Rude.mp3 in Resources */,
 				045AC7DB2BE8755D0089E49A /* SettingsCollectionViewCell.xib in Resources */,
 				0455378A2BF437CD00CB8863 /* PINK EYES! - Сон.mp3 in Resources */,
 				0455378E2BF437CD00CB8863 /* LONEVATE feat. 18th - запах сирени.mp3 in Resources */,
+				04E324DE2C06C3BC00B12B21 /* mainScreen.json in Resources */,
 				0455378B2BF437CD00CB8863 /* Пошлая Молли - 2013.mp3 in Resources */,
 				045AC7EA2BE994D20089E49A /* MusicSettingsCollectionViewCell.xib in Resources */,
 				0455378D2BF437CD00CB8863 /* saypink kolenki.mp3 in Resources */,
+				04E324DB2C06BE5F00B12B21 /* loadView.json in Resources */,
 				045537892BF437CD00CB8863 /* saypink! - БРОСАЙ.mp3 in Resources */,
 				04E324D32C0407D500B12B21 /* NotLocalizable.strings in Resources */,
 				0455378C2BF437CD00CB8863 /* КОСМОНАВТОВ НЕТ - вход прости Юра мы всё потеряли.mp3 in Resources */,

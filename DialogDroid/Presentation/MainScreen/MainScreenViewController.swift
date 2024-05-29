@@ -1,4 +1,5 @@
 import UIKit
+import Lottie
 
 class MainScreenViewController: UIViewController {
 
@@ -9,17 +10,37 @@ class MainScreenViewController: UIViewController {
     private let serviceProvider: ServicesProvider = DefaultServicesProvider.shared
     private var isNeedShowSplashScreen: Bool = true
 
+    private let animatedMainScreen = {
+        let view = LottieAnimationView()
+        view.animation = .named("mainScreen")
+        view.loopMode = .loop
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+
     // MARK: - Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         checkIfLaunchBefore()
         setupLabels()
+        setupLogoView()
     }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         configureNavigationBar()
         showSplashScreen()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        animatedMainScreen.play()
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        animatedMainScreen.pause()
     }
 
     // MARK: - Actions
@@ -46,7 +67,7 @@ class MainScreenViewController: UIViewController {
     }
 
     // MARK: - Private Methods
-
+ 
     private func setupLabels() {
         centerLabel.text = R.string.localizable.mainScreenCenterLabel()
     }
@@ -75,17 +96,15 @@ class MainScreenViewController: UIViewController {
         splashScreenViewController.modalPresentationStyle = .fullScreen
         present(splashScreenViewController, animated: false)
     }
-}
-
-    // MARK: - Segue
-
-extension MainScreenViewController {
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch segue.identifier {
-        case "goToSettings":
-            guard let destinationController = segue.destination as? SettingsScreenViewController else { return }
-        default:
-            super.prepare(for: segue, sender: sender)
-        }
+    
+    private func setupLogoView() {
+        view.addSubview(animatedMainScreen)
+        NSLayoutConstraint.activate([
+            animatedMainScreen.leadingAnchor.constraint(equalTo: animatedViewContainer.leadingAnchor),
+            animatedMainScreen.trailingAnchor.constraint(equalTo: animatedViewContainer.trailingAnchor),
+            animatedMainScreen.topAnchor.constraint(equalTo: animatedViewContainer.topAnchor),
+            animatedMainScreen.bottomAnchor.constraint(equalTo: animatedViewContainer.bottomAnchor)
+        ])
     }
+
 }
