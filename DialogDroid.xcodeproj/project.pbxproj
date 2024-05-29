@@ -48,6 +48,7 @@
 		04DF28F22BE4A05D008247B1 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF28F12BE4A05D008247B1 /* R.generated.swift */; };
 		04E324D02C03FED700B12B21 /* AIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E324CF2C03FED700B12B21 /* AIManager.swift */; };
 		04E324D32C0407D500B12B21 /* NotLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04E324D12C0407D500B12B21 /* NotLocalizable.strings */; };
+		04E324D52C06A8EE00B12B21 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E324D42C06A8EE00B12B21 /* LaunchScreenViewController.swift */; };
 		04F2C8CA2BFC51E7006D4872 /* ChatScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F2C8C92BFC51E7006D4872 /* ChatScreenView.swift */; };
 		04F2C8CC2BFC75FD006D4872 /* Notification + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F2C8CB2BFC75FD006D4872 /* Notification + Extensions.swift */; };
 		04F2C8CE2BFC769D006D4872 /* UIView.AnimationOptions + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F2C8CD2BFC769D006D4872 /* UIView.AnimationOptions + Extensions.swift */; };
@@ -109,6 +110,7 @@
 		04DF28F12BE4A05D008247B1 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		04E324CF2C03FED700B12B21 /* AIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIManager.swift; sourceTree = "<group>"; };
 		04E324D22C0407D500B12B21 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/NotLocalizable.strings; sourceTree = "<group>"; };
+		04E324D42C06A8EE00B12B21 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		04F2C8C92BFC51E7006D4872 /* ChatScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreenView.swift; sourceTree = "<group>"; };
 		04F2C8CB2BFC75FD006D4872 /* Notification + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification + Extensions.swift"; sourceTree = "<group>"; };
 		04F2C8CD2BFC769D006D4872 /* UIView.AnimationOptions + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView.AnimationOptions + Extensions.swift"; sourceTree = "<group>"; };
@@ -455,6 +457,7 @@
 			isa = PBXGroup;
 			children = (
 				04DF28E12BE49C1E008247B1 /* LaunchScreen.storyboard */,
+				04E324D42C06A8EE00B12B21 /* LaunchScreenViewController.swift */,
 			);
 			path = LaunchScreen;
 			sourceTree = "<group>";
@@ -736,6 +739,7 @@
 				045AC7ED2BE9A8730089E49A /* MusicScreenModel.swift in Sources */,
 				04DF28D92BE49C1C008247B1 /* SceneDelegate.swift in Sources */,
 				045537962BF5C9C800CB8863 /* ChatScreenViewController.swift in Sources */,
+				04E324D52C06A8EE00B12B21 /* LaunchScreenViewController.swift in Sources */,
 				04F2C8CC2BFC75FD006D4872 /* Notification + Extensions.swift in Sources */,
 				045AC7F62BE9B4FC0089E49A /* ApplicationStorage.swift in Sources */,
 				04F2C8E62C002959006D4872 /* AIClientCommand.swift in Sources */,

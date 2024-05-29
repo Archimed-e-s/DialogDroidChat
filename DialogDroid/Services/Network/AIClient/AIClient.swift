@@ -3,7 +3,7 @@ import UIKit
 
 enum AIClientError: Error {
     case genericError(Error)
-    case decodingError(Error )
+    case decodingError(Error)
 }
 
 protocol AIClient: AnyObject {

@@ -10,6 +10,50 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Launch Screen View Controller-->
+        <scene sceneID="bkx-y4-5pL">
+            <objects>
+                <viewController storyboardIdentifier="splashVC" id="pcl-wN-OXP" customClass="LaunchScreenViewController" customModule="DialogDroid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EJp-ni-pWO">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H3k-EG-n6R">
+                                <rect key="frame" x="96.666666666666686" y="338.66666666666669" width="200" height="200.00000000000006"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="L33-RI-P2q"/>
+                                    <constraint firstAttribute="height" constant="200" id="gpe-oM-1JM"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dialog Droid" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfE-on-BNk">
+                                <rect key="frame" x="24" y="209" width="345" height="79.666666666666686"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="61"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" systemColor="systemOrangeColor"/>
+                                <color key="shadowColor" systemColor="systemOrangeColor"/>
+                                <size key="shadowOffset" width="3" height="5"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="d9o-Xp-YpD"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="H3k-EG-n6R" firstAttribute="top" secondItem="hfE-on-BNk" secondAttribute="bottom" constant="50" id="0c5-kM-cmP"/>
+                            <constraint firstItem="d9o-Xp-YpD" firstAttribute="trailing" secondItem="hfE-on-BNk" secondAttribute="trailing" constant="24" id="CIT-Cl-RYE"/>
+                            <constraint firstItem="H3k-EG-n6R" firstAttribute="centerX" secondItem="d9o-Xp-YpD" secondAttribute="centerX" id="E0o-kR-Tpp"/>
+                            <constraint firstItem="H3k-EG-n6R" firstAttribute="centerY" secondItem="d9o-Xp-YpD" secondAttribute="centerY" id="Xmh-b1-CQQ"/>
+                            <constraint firstItem="hfE-on-BNk" firstAttribute="top" secondItem="d9o-Xp-YpD" secondAttribute="top" constant="150" id="xu3-cD-Ac1"/>
+                            <constraint firstItem="hfE-on-BNk" firstAttribute="leading" secondItem="d9o-Xp-YpD" secondAttribute="leading" constant="24" id="yyf-QC-ex3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="animationContainerView" destination="H3k-EG-n6R" id="Zwm-Jq-Ven"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SMc-H2-HX5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1053" y="640"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="ONz-SZ-2h8">
             <objects>
@@ -346,7 +390,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

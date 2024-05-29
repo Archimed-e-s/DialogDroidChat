@@ -7,6 +7,7 @@ class MainScreenViewController: UIViewController {
     @IBOutlet private weak var animatedViewContainer: UIView!
     @IBOutlet private weak var centerLabel: UILabel!
     private let serviceProvider: ServicesProvider = DefaultServicesProvider.shared
+    private var isNeedShowSplashScreen: Bool = true
 
     // MARK: - Life Cycle
 
@@ -14,22 +15,11 @@ class MainScreenViewController: UIViewController {
         super.viewDidLoad()
         checkIfLaunchBefore()
         setupLabels()
-
-        let client = DefaultAIClient(token: ApplicationConstants.key)
-        client.sendCompletion(
-            with: "Какие данные у тебя есть обо мне",
-            model: .gpt35Turbo) { result in
-                switch result {
-                case .success(let success):
-                    print("message = ", success.choices.first?.message )
-                case .failure(let failure):
-                    print(failure)
-                }
-            }
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         configureNavigationBar()
+        showSplashScreen()
     }
 
     // MARK: - Actions
@@ -60,17 +50,34 @@ class MainScreenViewController: UIViewController {
     private func setupLabels() {
         centerLabel.text = R.string.localizable.mainScreenCenterLabel()
     }
+
     private func configureNavigationBar() {
         navigationItem.title = R.string.localizable.mainScreenTitle()
     }
+
     private func checkIfLaunchBefore() {
         if !serviceProvider.applicationStorage.isLaunchingBefore {
             serviceProvider.applicationStorage.isLaunchingBefore = true
         }
     }
+
+    private func showSplashScreen() {
+        guard isNeedShowSplashScreen  else { return }
+        isNeedShowSplashScreen = false
+        let storyboard = UIStoryboard(name: R.storyboard.main.name, bundle: nil)
+        guard let splashScreenViewController = storyboard.instantiateViewController(
+            withIdentifier: "splashVC"
+        ) as? LaunchScreenViewController
+        else { return }
+        splashScreenViewController.animationCompletion = { [weak self] in
+            self?.dismiss(animated: false)
+        }
+        splashScreenViewController.modalPresentationStyle = .fullScreen
+        present(splashScreenViewController, animated: false)
+    }
 }
 
-// MARK: - Segue
+    // MARK: - Segue
 
 extension MainScreenViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

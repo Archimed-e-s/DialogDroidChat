@@ -499,12 +499,14 @@ struct _R {
       let name = "Main"
 
       var goToPlainChat: RswiftResources.StoryboardViewControllerIdentifier<ChatScreenViewController> { .init(identifier: "goToPlainChat", storyboard: name, bundle: bundle) }
+      var splashVC: RswiftResources.StoryboardViewControllerIdentifier<LaunchScreenViewController> { .init(identifier: "splashVC", storyboard: name, bundle: bundle) }
 
       func validate() throws {
         if #available(iOS 13.0, *) { if UIKit.UIImage(systemName: "arrow.left.circle") == nil { throw RswiftResources.ValidationError("[R.swift] System image named 'arrow.left.circle' is used in storyboard 'Main', but couldn't be loaded.") } }
         if #available(iOS 13.0, *) { if UIKit.UIImage(systemName: "gearshape") == nil { throw RswiftResources.ValidationError("[R.swift] System image named 'gearshape' is used in storyboard 'Main', but couldn't be loaded.") } }
         if #available(iOS 13.0, *) { if UIKit.UIImage(systemName: "link.circle") == nil { throw RswiftResources.ValidationError("[R.swift] System image named 'link.circle' is used in storyboard 'Main', but couldn't be loaded.") } }
         if goToPlainChat() == nil { throw RswiftResources.ValidationError("[R.swift] ViewController with identifier 'goToPlainChat' could not be loaded from storyboard 'Main' as 'ChatScreenViewController'.") }
+        if splashVC() == nil { throw RswiftResources.ValidationError("[R.swift] ViewController with identifier 'splashVC' could not be loaded from storyboard 'Main' as 'LaunchScreenViewController'.") }
       }
     }
   }
