@@ -1,7 +1,7 @@
 import Foundation
 
 enum ApplicationConstants {
-    static let key: String = "sk-h6jEmxDRNwpIPcLUYAUKIzqPHKakKSqx"
+    static let key: String = "No no no not today man :)"
 }
 
-/// API key : sk-h6jEmxDRNwpIPcLUYAUKIzqPHKakKSqx
+
