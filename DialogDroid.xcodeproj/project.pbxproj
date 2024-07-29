@@ -13,6 +13,7 @@
 		044837EE2BEB01BF00069C53 /* CoreDataChatMessage+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044837EC2BEB01BF00069C53 /* CoreDataChatMessage+CoreDataClass.swift */; };
 		044837EF2BEB01BF00069C53 /* CoreDataChatMessage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044837ED2BEB01BF00069C53 /* CoreDataChatMessage+CoreDataProperties.swift */; };
 		044837F42BEB072000069C53 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044837F32BEB072000069C53 /* MessageModel.swift */; };
+		045079F82C571505000CF50C /* MusicScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045079F72C571505000CF50C /* MusicScreenModel.swift */; };
 		045537882BF437CD00CB8863 /* Magic - Rude.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 045537812BF437CD00CB8863 /* Magic - Rude.mp3 */; };
 		045537892BF437CD00CB8863 /* saypink! - БРОСАЙ.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 045537822BF437CD00CB8863 /* saypink! - БРОСАЙ.mp3 */; };
 		0455378A2BF437CD00CB8863 /* PINK EYES! - Сон.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 045537832BF437CD00CB8863 /* PINK EYES! - Сон.mp3 */; };
@@ -32,7 +33,6 @@
 		045AC7E72BE98F7B0089E49A /* MusicScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AC7E62BE98F7B0089E49A /* MusicScreenViewController.swift */; };
 		045AC7EA2BE994D20089E49A /* MusicSettingsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045AC7E92BE994D20089E49A /* MusicSettingsCollectionViewCell.xib */; };
 		045AC7EB2BE994D20089E49A /* MusicSettingsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AC7E82BE994D20089E49A /* MusicSettingsCollectionViewCell.swift */; };
-		045AC7ED2BE9A8730089E49A /* MusicScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AC7EC2BE9A8730089E49A /* MusicScreenModel.swift */; };
 		045AC7F22BE9B4760089E49A /* UserDefaultStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AC7F12BE9B4760089E49A /* UserDefaultStorage.swift */; };
 		045AC7F42BE9B48F0089E49A /* ApplicationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AC7F32BE9B48F0089E49A /* ApplicationSettings.swift */; };
 		045AC7F62BE9B4FC0089E49A /* ApplicationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AC7F52BE9B4FC0089E49A /* ApplicationStorage.swift */; };
@@ -76,6 +76,7 @@
 		044837EC2BEB01BF00069C53 /* CoreDataChatMessage+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataChatMessage+CoreDataClass.swift"; sourceTree = "<group>"; };
 		044837ED2BEB01BF00069C53 /* CoreDataChatMessage+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataChatMessage+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		044837F32BEB072000069C53 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
+		045079F72C571505000CF50C /* MusicScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicScreenModel.swift; sourceTree = "<group>"; };
 		045537812BF437CD00CB8863 /* Magic - Rude.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Magic - Rude.mp3"; sourceTree = "<group>"; };
 		045537822BF437CD00CB8863 /* saypink! - БРОСАЙ.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "saypink! - БРОСАЙ.mp3"; sourceTree = "<group>"; };
 		045537832BF437CD00CB8863 /* PINK EYES! - Сон.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "PINK EYES! - Сон.mp3"; sourceTree = "<group>"; };
@@ -95,7 +96,6 @@
 		045AC7E62BE98F7B0089E49A /* MusicScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicScreenViewController.swift; sourceTree = "<group>"; };
 		045AC7E82BE994D20089E49A /* MusicSettingsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSettingsCollectionViewCell.swift; sourceTree = "<group>"; };
 		045AC7E92BE994D20089E49A /* MusicSettingsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicSettingsCollectionViewCell.xib; sourceTree = "<group>"; };
-		045AC7EC2BE9A8730089E49A /* MusicScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MusicScreenModel.swift; path = ../../../../../../Documents/MusicScreenModel.swift; sourceTree = "<group>"; };
 		045AC7F12BE9B4760089E49A /* UserDefaultStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultStorage.swift; sourceTree = "<group>"; };
 		045AC7F32BE9B48F0089E49A /* ApplicationSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationSettings.swift; sourceTree = "<group>"; };
 		045AC7F52BE9B4FC0089E49A /* ApplicationStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationStorage.swift; sourceTree = "<group>"; };
@@ -183,6 +183,14 @@
 			isa = PBXGroup;
 			children = (
 				044837F32BEB072000069C53 /* MessageModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		045079F62C5714F1000CF50C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				045079F72C571505000CF50C /* MusicScreenModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -289,7 +297,7 @@
 		045AC7E22BE98F370089E49A /* MusicSettingsScreen */ = {
 			isa = PBXGroup;
 			children = (
-				045AC7E52BE98F5E0089E49A /* Model */,
+				045079F62C5714F1000CF50C /* Model */,
 				045AC7E42BE98F570089E49A /* View */,
 				045AC7E32BE98F500089E49A /* Controller */,
 			);
@@ -311,14 +319,6 @@
 				045AC7E92BE994D20089E49A /* MusicSettingsCollectionViewCell.xib */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		045AC7E52BE98F5E0089E49A /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				045AC7EC2BE9A8730089E49A /* MusicScreenModel.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		045AC7EE2BE9B4330089E49A /* Services */ = {
@@ -760,11 +760,11 @@
 				044837E42BEAFCD800069C53 /* CoreDataManager.swift in Sources */,
 				04DF28D72BE49C1C008247B1 /* AppDelegate.swift in Sources */,
 				045AC7F92BE9B6940089E49A /* Bundle+Extensions.swift in Sources */,
-				045AC7ED2BE9A8730089E49A /* MusicScreenModel.swift in Sources */,
 				04DF28D92BE49C1C008247B1 /* SceneDelegate.swift in Sources */,
 				045537962BF5C9C800CB8863 /* ChatScreenViewController.swift in Sources */,
 				04E324D52C06A8EE00B12B21 /* LaunchScreenViewController.swift in Sources */,
 				04F2C8CC2BFC75FD006D4872 /* Notification + Extensions.swift in Sources */,
+				045079F82C571505000CF50C /* MusicScreenModel.swift in Sources */,
 				045AC7F62BE9B4FC0089E49A /* ApplicationStorage.swift in Sources */,
 				04F2C8E62C002959006D4872 /* AIClientCommand.swift in Sources */,
 				04F2C8D52C000846006D4872 /* RoleScreenTableViewCell.swift in Sources */,
